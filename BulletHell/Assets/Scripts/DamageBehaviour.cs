@@ -11,6 +11,7 @@ public class DamageBehaviour : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out HealthBehaviour h) && h.enabled)
         {
+            Debug.Log("hit");
             h.Damage(damage);
         }
     }

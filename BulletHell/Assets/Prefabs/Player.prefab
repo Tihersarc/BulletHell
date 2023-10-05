@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2096185120343044729}
   - component: {fileID: 6167827687343636995}
   m_Layer: 7
-  m_Name: Eurofighter_0
+  m_Name: Eurofighter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,8 +119,8 @@ GameObject:
   - component: {fileID: 6403611707080527690}
   - component: {fileID: 63473683871389417}
   - component: {fileID: 6998348636278106032}
-  - component: {fileID: 8782455145259170688}
   - component: {fileID: 297646228899135245}
+  - component: {fileID: 8782455145259170688}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -251,20 +251,6 @@ PolygonCollider2D:
       - {x: -0.3403864, y: -0.3667773}
       - {x: 0.40591213, y: -0.35500422}
   m_UseDelaunayMesh: 0
---- !u!114 &8782455145259170688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3167564489057315306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5320757f8a3a161439253efc83aaf9b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bullet: {fileID: 3167745528655570432, guid: b12aacd02ca4fff4ca99498fb692c95a, type: 3}
-  _shootPoint: {fileID: 6261370516837188068}
 --- !u!114 &297646228899135245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +271,20 @@ MonoBehaviour:
   OnDie:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8782455145259170688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167564489057315306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5320757f8a3a161439253efc83aaf9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bullet: {fileID: 3167745528655570432, guid: b12aacd02ca4fff4ca99498fb692c95a, type: 3}
+  _shootPoint: {fileID: 6261370516837188068}
 --- !u!1 &6261370516837188068
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +310,7 @@ Transform:
   m_GameObject: {fileID: 6261370516837188068}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.11, z: 0}
+  m_LocalPosition: {x: 0, y: 0.648, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
