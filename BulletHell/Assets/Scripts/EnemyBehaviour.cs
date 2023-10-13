@@ -14,12 +14,10 @@ public class EnemyBehaviour : MonoBehaviour
 
     enum Spawn { A, B }
 
-    //[Header("Bullet Attributes")]
-    //[SerializeField] private GameObject bullet; // -----TODO
-
     [Header("Bullet Patterns")]
     [SerializeField] private Pattern pattern;
     [SerializeField] private float shootingRate;
+    [SerializeField] private float rotationRate;
 
     void Start()
     {
@@ -35,7 +33,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (pattern == Pattern.Spin)
         {
-            shootPoint.transform.eulerAngles = new Vector3(0, 0, shootPoint.transform.eulerAngles.z + 1f);
+            shootPoint.transform.eulerAngles = new Vector3(0f, 0f, shootPoint.transform.eulerAngles.z + rotationRate);
         }
 
         if (timer >= shootingRate)
