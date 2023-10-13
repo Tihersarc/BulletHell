@@ -14,6 +14,8 @@ public class ShootBehaviour : MonoBehaviour
 
     public void Shoot()
     {
-        Instantiate(_bullet, _shootPoint.transform.position, this.transform.rotation); // Add rotation towards where is going
+        //GameObject bulletIntance = Instantiate(_bullet, _shootPoint.transform.position, this.transform.rotation); // Add rotation towards where is going
+        GameObject bulletIntance = Instantiate(_bullet, _shootPoint.transform.position, transform.rotation);
+        bulletIntance.GetComponent<BulletBehaviour>().Init(transform.right);
     }
 }

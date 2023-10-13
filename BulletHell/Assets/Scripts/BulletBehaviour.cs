@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletBehaviour : MonoBehaviour
 {
     private MovementBehaviour _movement;
+    private Vector3 direction;
 
     void Start()
     {
@@ -13,6 +14,11 @@ public class BulletBehaviour : MonoBehaviour
 
     void Update()
     {
-        _movement.Move(Vector3.up); //Move towards the direction the gameobject is moving
+        _movement.Move(direction);
+    }
+
+    public void Init(Vector3 dir)
+    {
+        direction = dir;
     }
 }
