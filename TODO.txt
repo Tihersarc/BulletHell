@@ -15,10 +15,13 @@ TO DO:
 
 - Add enemy spawner + movement
 
+- Power UPs
+
 - Volume(SFX + Music)
 
 - Background parallax / Better background
 
+- Add more patterns
 
 
 BUGS:
