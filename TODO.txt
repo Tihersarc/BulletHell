@@ -1,13 +1,14 @@
 TO DO:
 
 19/10:
-- Main menu
 
 - Config menu
 
 - Add player health/lives
 
 - Add win/lose condition
+
+- Volume(SFX + Music)
 
 -------------------------------------------------------------
 
@@ -16,8 +17,6 @@ TO DO:
 - Add enemy spawner + movement
 
 - Power UPs
-
-- Volume(SFX + Music)
 
 - Background parallax / Better background
 
