@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 6403611707080527690}
   - component: {fileID: 63473683871389417}
   - component: {fileID: 6998348636278106032}
+  - component: {fileID: 5624928134154473795}
   - component: {fileID: 297646228899135245}
   - component: {fileID: 8782455145259170688}
   m_Layer: 7
@@ -250,6 +251,33 @@ PolygonCollider2D:
       - {x: 0.07011029, y: 0.029533776}
       - {x: 0.07047579, y: -0.029224262}
   m_UseDelaunayMesh: 0
+--- !u!50 &5624928134154473795
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167564489057315306}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!114 &297646228899135245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,21 +292,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 5
   _currentHealth: 0
-  OnHurt:
+  OnHealthChange:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnDie:
     m_PersistentCalls:
       m_Calls:

@@ -10,10 +10,11 @@ public class MovementBehaviour : MonoBehaviour
     [SerializeField]
     private Vector3 direction;
 
+    //private Rigidbody2D rb;
 
     private void Start()
     {
-
+        //rb = GetComponent<Rigidbody2D>();
     }
 
     public void SetSpeed(float s) {
@@ -27,6 +28,7 @@ public class MovementBehaviour : MonoBehaviour
 
     public void Move(Vector3 direction)
     {
+        //rb.velocity = direction.normalized;
         transform.position += speed * Time.deltaTime * direction;
     }
 

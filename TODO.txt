@@ -2,17 +2,18 @@ TO DO:
 
 19/10:
 
-- Add win/lose condition
+- Add win/lose condition (Fix Event, reference gamecontroller in enemy behaviour)
 
 - Volume(SFX + Music)
 
 - Config menu
 
-- Collider Container (Move player with rigidbody)
 
 -------------------------------------------------------------
 
-- In game UI
+- In game UI (Score, boosters, etc)
+
+- Edge Collider Container (Move player with rigidbody)
 
 - Add enemy spawner + movement
 

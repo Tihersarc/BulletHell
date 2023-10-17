@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    enum Pattern { Straight, Spin}
+    enum Pattern { Straight, Spin }
 
     [SerializeField] private GameObject shootPoint;
 
+    private GameObject gameController;
+
     private ShootBehaviour shootBehaviour;
-    private float rotation;
+    //private float rotation;
     private float timer;
 
     enum Spawn { A, B }
@@ -21,9 +23,10 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Start()
     {
+        gameController = GameObject.Find("GameController");
         shootBehaviour = GetComponent<ShootBehaviour>();
         timer = 0f;
-        rotation = 0f;
+        //rotation = 0f;
     }
 
 
@@ -42,4 +45,10 @@ public class EnemyBehaviour : MonoBehaviour
             timer = 0f;
         }
     }
+
+    public void Remove()
+    {
+        GameController.RemoveEnemy();
+    }
+
 }
