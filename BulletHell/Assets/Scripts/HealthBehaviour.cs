@@ -13,13 +13,7 @@ public class HealthBehaviour : MonoBehaviour
     [SerializeField]
     private float _currentHealth;
 
-    //[SerializeField]
-    //private Image bar;
-
-    //[SerializeField]
-    //private TextMeshProUGUI livesText;
-
-    public UnityEvent<int> OnHurt;
+    public UnityEvent OnHealthChange;
 
     public UnityEvent OnDie;
     
@@ -27,17 +21,7 @@ public class HealthBehaviour : MonoBehaviour
     {
         ResetHealth();
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Damage(1);
-        }
-        //if (livesText != null)
-        //{
-        //    livesText.SetText("Lives: " + _currentHealth);
-        //}
-    }
+
     public void Heal(int quantity)
     {
         _currentHealth += quantity;
@@ -51,29 +35,22 @@ public class HealthBehaviour : MonoBehaviour
     {
         _currentHealth -= damage;
 
-        //UpdateHealthBar();
 
         if (_currentHealth <= 0)
         {
             _currentHealth = 0;
             OnDie.Invoke(); // Llamar al evento
         }
+
+        OnHealthChange.Invoke();
     }
 
-    //public void UpdateHealthBar()
-    //{
-    //    if (bar != null)
-    //    {
-    //        bar.fillAmount = _currentHealth / _maxHealth;
-    //    }
-    //}
-
-    public float Get_currentHealth()
+    public float GetCurrentHealth()
     {
         return _currentHealth;
     }
 
-    public float Get_maxHealth()
+    public float GetMaxHealth()
     {
         return _maxHealth;
     }
@@ -81,5 +58,6 @@ public class HealthBehaviour : MonoBehaviour
     public void ResetHealth()
     {
         _currentHealth = _maxHealth;
+        OnHealthChange.Invoke();
     }
 }
