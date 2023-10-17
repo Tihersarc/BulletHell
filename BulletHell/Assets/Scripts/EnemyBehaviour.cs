@@ -8,7 +8,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     [SerializeField] private GameObject shootPoint;
 
-    private GameObject gameController;
+    private GameController gameController;
 
     private ShootBehaviour shootBehaviour;
     //private float rotation;
@@ -23,7 +23,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Start()
     {
-        gameController = GameObject.Find("GameController");
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
         shootBehaviour = GetComponent<ShootBehaviour>();
         timer = 0f;
         //rotation = 0f;
@@ -48,7 +48,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     public void Remove()
     {
-        GameController.RemoveEnemy();
+        gameController.RemoveEnemy();
     }
 
 }

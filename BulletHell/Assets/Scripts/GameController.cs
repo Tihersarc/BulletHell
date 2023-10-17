@@ -5,9 +5,9 @@ using UnityEngine.Events;
 
 public class GameController : MonoBehaviour
 {
-    public static UnityEvent OnLevelFinish;
+    public UnityEvent OnLevelFinish;
 
-    public static int enemyCount;
+    private int enemyCount;
 
     [SerializeField] private List<GameObject> EnemyList;
 
@@ -15,14 +15,9 @@ public class GameController : MonoBehaviour
     {
         EnemyList = new List<GameObject>();
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-
-        //foreach (var enemy in GameObject.FindGameObjectsWithTag("Enemy"))
-        //{
-        //    EnemyList.Add(enemy);
-        //}
     }
 
-    public static void RemoveEnemy()
+    public void RemoveEnemy()
     {
         //EnemyList.Remove(enemy);
         enemyCount--;

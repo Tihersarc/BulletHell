@@ -2,14 +2,13 @@ TO DO:
 
 19/10:
 
-- Add win/lose condition (Fix Event, reference gamecontroller in enemy behaviour)
+- Add pause (Continue button on pause)
 
 - Volume(SFX + Music)
 
-- Config menu
-
-
 -------------------------------------------------------------
+
+- Config menu
 
 - In game UI (Score, boosters, etc)
 
