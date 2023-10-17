@@ -2,15 +2,13 @@ TO DO:
 
 19/10:
 
-- Collider Container (Move player with rigidbody)
-
-- Add player health/lives UI
-
 - Add win/lose condition
 
 - Volume(SFX + Music)
 
 - Config menu
+
+- Collider Container (Move player with rigidbody)
 
 -------------------------------------------------------------
 
