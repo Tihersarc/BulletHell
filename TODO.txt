@@ -24,3 +24,5 @@ TO DO:
 
 
 BUGS:
+
+- Pause time when win/lose

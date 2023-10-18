@@ -5,8 +5,9 @@ using UnityEngine;
 public class EnemyBehaviour : MonoBehaviour
 {
     enum Pattern { Straight, Spin }
+    enum Direction { Left, Right }
 
-    [SerializeField] private GameObject shootPoint;
+    private GameObject shootPoint;
 
     private GameController gameController;
 
@@ -20,9 +21,11 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private Pattern pattern;
     [SerializeField] private float shootingRate;
     [SerializeField] private float rotationRate;
+    [SerializeField] private Direction rotationDirection;
 
     void Start()
     {
+        shootPoint = this.GetComponent<ShootBehaviour>().GetShootPoint();
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         shootBehaviour = GetComponent<ShootBehaviour>();
         timer = 0f;
@@ -36,7 +39,14 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (pattern == Pattern.Spin)
         {
-            shootPoint.transform.eulerAngles = new Vector3(0f, 0f, shootPoint.transform.eulerAngles.z + rotationRate);
+            if (rotationDirection == Direction.Left)
+            {
+                shootPoint.transform.eulerAngles = new Vector3(0f, 0f, shootPoint.transform.eulerAngles.z + -rotationRate);
+            }
+            else
+            {
+                shootPoint.transform.eulerAngles = new Vector3(0f, 0f, shootPoint.transform.eulerAngles.z + rotationRate);
+            }
         }
 
         if (timer >= shootingRate)
