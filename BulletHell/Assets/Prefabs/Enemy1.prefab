@@ -279,10 +279,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0205fd76d274e4409004bd900284abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootPoint: {fileID: 1325811522839738462}
   pattern: 0
   shootingRate: 1
   rotationRate: 0
+  rotationDirection: 0
 --- !u!114 &7101563014742887873
 MonoBehaviour:
   m_ObjectHideFlags: 0
