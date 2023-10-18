@@ -2,8 +2,6 @@ TO DO:
 
 19/10:
 
-- Add pause (Continue button on pause)
-
 - Volume(SFX + Music)
 
 -------------------------------------------------------------

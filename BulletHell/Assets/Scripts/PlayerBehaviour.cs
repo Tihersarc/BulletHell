@@ -52,5 +52,11 @@ public class PlayerBehaviour : MonoBehaviour
     {
         _movementInput = input.Get<Vector2>();
     }
+
+    private void OnPause()
+    {
+        Debug.Log("PauseToggled");
+        PauseController.GetInstance().TogglePause();
+    }
 }
 
