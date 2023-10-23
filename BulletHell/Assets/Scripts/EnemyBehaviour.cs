@@ -53,7 +53,19 @@ public class EnemyBehaviour : MonoBehaviour
         {
             shootBehaviour.Shoot();
             timer = 0f;
+            //Test();
         }
+    }
+
+    // Pattern Test
+    int x = 2;
+    public void Test()
+    {
+        float res = Mathf.Abs(Mathf.Sin(5 * x * Mathf.PI / 360));
+
+        shootPoint.transform.eulerAngles = new Vector3(0f, 0f, res);
+        shootBehaviour.Shoot();
+        x++;
     }
 
     public void Remove()

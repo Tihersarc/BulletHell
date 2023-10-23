@@ -9,17 +9,13 @@ public class GameController : MonoBehaviour
 
     private int enemyCount;
 
-    [SerializeField] private List<GameObject> EnemyList;
-
     void Start()
     {
-        EnemyList = new List<GameObject>();
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
 
     public void RemoveEnemy()
     {
-        //EnemyList.Remove(enemy);
         enemyCount--;
 
         if (enemyCount <= 0 ) {

@@ -1,18 +1,16 @@
 TO DO:
 
-- Delete bullets when they exit the screen
+- Edge Collider Container (Move player with rigidbody)
 
 - Retro PostFX?
 
-- More SFX(Enemies shooting)
-
 - Config menu
 
-- In game UI (Score, boosters, etc)
-
-- Edge Collider Container (Move player with rigidbody)
-
 - Add enemy spawner + movement
+
+- More SFX(Enemies shooting)
+
+- In game UI (Score, boosters, etc)
 
 - Power UPs
 
