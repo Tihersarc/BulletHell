@@ -13,7 +13,7 @@ public class BulletBehaviour : MonoBehaviour
         _movement = GetComponent<MovementBehaviour>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         _movement.Move(direction);
     }

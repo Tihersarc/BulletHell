@@ -12,7 +12,6 @@ public class PlayerBehaviour : MonoBehaviour
     private MovementBehaviour _movement;
     private ShootBehaviour _shotBehaviour;
     private Vector2 _movementInput;
-    
 
     // Variable to know if the player is facing left or right on the X axis
 
@@ -27,17 +26,17 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (_movementInput != Vector2.zero)
-        {
-            _movement.Move(_movementInput);
-        }
-
         // Function to enable or disable the godmode
         if (Input.GetKeyDown(KeyCode.G))
         {
             Debug.Log("Godmode toggled");
             GetComponent<HealthBehaviour>().enabled = !GetComponent<HealthBehaviour>().enabled;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        _movement.Move(_movementInput);
     }
 
     void OnFire()
