@@ -1007,7 +1007,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 63473683871389417, guid: 0367908088a51dd49bf14054a77efbd9, type: 3}
       propertyPath: speed
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 297646228899135245, guid: 0367908088a51dd49bf14054a77efbd9, type: 3}
       propertyPath: _maxHealth

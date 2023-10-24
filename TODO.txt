@@ -2,6 +2,8 @@ TO DO:
 
 - Edge Collider Container (Move player with rigidbody)
 
+-Blurry sprite when moving
+
 - Retro PostFX?
 
 - Config menu
