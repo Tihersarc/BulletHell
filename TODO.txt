@@ -1,6 +1,6 @@
 TO DO:
 
--Blurry sprite when moving
+- Blurry sprite when moving
 
 - Retro PostFX?
 
@@ -25,3 +25,4 @@ TO DO:
 BUGS:
 
 - Pause time when win/lose
+s
