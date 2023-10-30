@@ -4,7 +4,7 @@ TO DO:
 
 - Retro PostFX?
 
-- Config menu
+- Config menu and pixelate MainMenu
 
 - Add enemy spawner + movement
 
@@ -25,4 +25,3 @@ TO DO:
 BUGS:
 
 - Pause time when win/lose
-s
