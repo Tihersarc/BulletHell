@@ -1,22 +1,24 @@
 TO DO:
 
-- Blurry sprite when moving
-
-- Retro PostFX?
-
-- Config menu and pixelate MainMenu
-
 - Add enemy spawner + movement
-
-- More SFX(Enemies shooting)
-
-- In game UI (Score, boosters, etc)
 
 - Power UPs
 
-- Background parallax / Better background
+- Blurry sprite when moving
+
+- Improve background scroll
+
+- In game UI (Score, boosters, etc)
+
+- Config menu and pixelate MainMenu
+
+- More SFX(Enemies shooting)
 
 - Add more patterns
+
+-------------------------------------------------
+
+- Retro PostFX?
 
 - Scoreboard
 

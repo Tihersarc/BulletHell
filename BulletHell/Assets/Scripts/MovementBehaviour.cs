@@ -30,16 +30,10 @@ public class MovementBehaviour : MonoBehaviour
     {
         direction.Normalize();
         rb.velocity = speed * direction;
-        //transform.position += speed * Time.deltaTime * direction;
     }
 
-    public void Move()
+    public void MoveTransform()
     {
         transform.position += speed * Time.deltaTime * direction;
     }
-
-    //public void MoveToPosition()
-    //{
-    //    transform.position += Vector3.MoveTowards(speed * Time.deltaTime *);
-    //}
 }
