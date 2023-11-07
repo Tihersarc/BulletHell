@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
@@ -12,6 +10,7 @@ public class EnemyBehaviour : MonoBehaviour
     private GameController gameController;
 
     private ShootBehaviour shootBehaviour;
+
     //private float rotation;
     private float timer;
 
@@ -29,7 +28,6 @@ public class EnemyBehaviour : MonoBehaviour
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         shootBehaviour = GetComponent<ShootBehaviour>();
         timer = 0f;
-        //rotation = 0f;
     }
 
 
@@ -57,7 +55,7 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
-    // Pattern Test
+    // Pattern Test----------
     int x = 2;
     public void Test()
     {
@@ -72,5 +70,4 @@ public class EnemyBehaviour : MonoBehaviour
     {
         gameController.RemoveEnemy();
     }
-
 }

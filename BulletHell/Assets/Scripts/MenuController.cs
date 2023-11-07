@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -7,11 +5,11 @@ using TMPro;
 
 public class MenuController : MonoBehaviour
 {
-    [SerializeField] private int _sceneOnPlay;
+    [SerializeField] private int sceneOnPlay;
 
-    [SerializeField] private TMP_Text _volumeTextValue;
-    [SerializeField] private Slider _volumeSlider;
-    [SerializeField] private float _defaultVolume;
+    [SerializeField] private TMP_Text volumeTextValue;
+    [SerializeField] private Slider volumeSlider;
+    [SerializeField] private float defaultVolume;
 
     //[Header("Levels")]
     //public string _newGameLevel;
@@ -24,7 +22,7 @@ public class MenuController : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene(_sceneOnPlay); 
+        SceneManager.LoadScene(sceneOnPlay); 
     }
     public void LoadScene(int scene)
     {
@@ -41,12 +39,12 @@ public class MenuController : MonoBehaviour
     // Set volumetext
     public void VolumeSetSliderValue(float volume)
     {
-        _volumeTextValue.text = volume.ToString("0.0");
+        volumeTextValue.text = volume.ToString("0.0");
     }
 
     public void VolumeReset()
     {
-        _volumeSlider.value = _defaultVolume;
-        _volumeTextValue.text = _defaultVolume.ToString("0.0");
+        volumeSlider.value = defaultVolume;
+        volumeTextValue.text = defaultVolume.ToString("0.0");
     }
 }

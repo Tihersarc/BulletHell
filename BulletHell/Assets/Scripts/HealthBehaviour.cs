@@ -1,17 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
-using TMPro;
 
 public class HealthBehaviour : MonoBehaviour
 {
     [SerializeField]
-    private float _maxHealth;
+    private float maxHealth;
 
     [SerializeField]
-    private float _currentHealth;
+    private float currentHealth;
 
     public UnityEvent OnHealthChange;
 
@@ -24,22 +20,22 @@ public class HealthBehaviour : MonoBehaviour
 
     public void Heal(int quantity)
     {
-        _currentHealth += quantity;
-        if (_currentHealth > _maxHealth)
+        currentHealth += quantity;
+        if (currentHealth > maxHealth)
         {
-            _currentHealth = _maxHealth;
+            currentHealth = maxHealth;
         }
     }
 
     public void Damage(int damage)
     {
-        _currentHealth -= damage;
+        currentHealth -= damage;
 
 
-        if (_currentHealth <= 0)
+        if (currentHealth <= 0)
         {
-            _currentHealth = 0;
-            OnDie.Invoke(); // Llamar al evento
+            currentHealth = 0;
+            OnDie.Invoke();
         }
 
         OnHealthChange.Invoke();
@@ -47,17 +43,17 @@ public class HealthBehaviour : MonoBehaviour
 
     public float GetCurrentHealth()
     {
-        return _currentHealth;
+        return currentHealth;
     }
 
     public float GetMaxHealth()
     {
-        return _maxHealth;
+        return maxHealth;
     }
 
     public void ResetHealth()
     {
-        _currentHealth = _maxHealth;
+        currentHealth = maxHealth;
         OnHealthChange.Invoke();
     }
 }
