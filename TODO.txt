@@ -4,8 +4,6 @@ TO DO:
 
 - Power UPs
 
-- Blurry sprite when moving
-
 - Improve background scroll
 
 - In game UI (Score, boosters, etc)
@@ -13,6 +11,8 @@ TO DO:
 - Config menu and pixelate MainMenu
 
 - More SFX(Enemies shooting)
+
+-Player hit feedback
 
 - Add more patterns
 
@@ -23,6 +23,8 @@ TO DO:
 - Scoreboard
 
 - GameObject pooling
+
+- Blurry sprite when moving
 
 BUGS:
 

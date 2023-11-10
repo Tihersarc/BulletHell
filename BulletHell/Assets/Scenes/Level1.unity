@@ -1014,6 +1014,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 297646228899135245, guid: 0367908088a51dd49bf14054a77efbd9, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 297646228899135245, guid: 0367908088a51dd49bf14054a77efbd9, type: 3}
       propertyPath: _maxHealth
       value: 3
       objectReference: {fileID: 0}
@@ -2587,7 +2591,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HP: 3'
+  m_text: 'HP:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3733,10 +3737,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce2c6cafc0895045a5be4636637653a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneOnPlay: 0
-  _volumeTextValue: {fileID: 0}
-  _volumeSlider: {fileID: 0}
-  _defaultVolume: 0
+  sceneOnPlay: 0
+  volumeTextValue: {fileID: 0}
+  volumeSlider: {fileID: 0}
+  defaultVolume: 0
 --- !u!4 &2062332624
 Transform:
   m_ObjectHideFlags: 0

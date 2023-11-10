@@ -611,11 +611,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1169338895}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: LoadScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -970,10 +970,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce2c6cafc0895045a5be4636637653a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneOnPlay: 1
-  _volumeTextValue: {fileID: 0}
-  _volumeSlider: {fileID: 0}
-  _defaultVolume: 0
+  sceneOnPlay: 0
+  volumeTextValue: {fileID: 0}
+  volumeSlider: {fileID: 0}
+  defaultVolume: 0
 --- !u!1 &1273339091
 GameObject:
   m_ObjectHideFlags: 0
