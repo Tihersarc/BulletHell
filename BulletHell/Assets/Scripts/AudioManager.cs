@@ -1,36 +1,75 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField]
-    private AudioClip[] soundList;
-
     private static AudioManager Instance;
+
+    // Replace with new system
     private static List<AudioClip> audioList;
+    [SerializeField] private AudioClip[] soundList;
 
-    //[SerializeField]
-    //private Slider volumeSlider;
+    public static float musicVolume {  get; private set; }
+    public static float sfxVolume { get; private set; }
+    
+    //[SerializeField] private TextMeshProUGUI musicSliderText;
+    //[SerializeField] private TextMeshProUGUI sfxSliderText;
+    [SerializeField] private AudioMixerGroup musicGroup;
+    [SerializeField] private AudioMixerGroup sfxGroup;
+    [SerializeField] private Sound[] sounds;
 
-    public void Start()
+    public void Awake()
     {
         Instance = this;
         audioList = new List<AudioClip>();
+
+        foreach (Sound s in sounds)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.audioClip;
+            s.source.loop = s.isLoop;
+            s.source.volume = s.volume;
+
+            switch (s.audioType)
+            {
+                case Sound.AudioTypes.soundEffect:
+                    s.source.outputAudioMixerGroup = sfxGroup;
+                    break;
+
+                case Sound.AudioTypes.music:
+                    s.source.outputAudioMixerGroup = musicGroup;
+                    break;
+            }
+
+            if (s.playOnAwake)
+            {
+                s.source.Play();
+            }
+        }
 
         for (int i = 0; i < soundList.Length; i++) {
             audioList.Add(soundList[i]);
         }
 
     }
+
     public static void PlaySound(int soundNumber)
     {
         Instance.gameObject.GetComponent<AudioSource>().PlayOneShot(audioList[soundNumber]);
     }
 
-    //public void Slider()
-    //{
-    //    float volume = volumeSlider.value;
-    //    AudioListener.volume = volume;
-    //}
+    public void OnMusicSliderValueChange(float value)
+    {
+        musicVolume = value;
+        musicGroup.audioMixer.SetFloat("MusicVolume", Mathf.Log10(value) * 20);
+    }
+
+    public void OnSfxSliderValueChange(float value)
+    {
+        sfxVolume = value;
+        sfxGroup.audioMixer.SetFloat("SfxVolume", Mathf.Log10(value)*20);
+    }
 }
