@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    private SpriteRenderer _sprite;
     private MovementBehaviour _movement;
     private ShootBehaviour _shotBehaviour;
     private Vector2 movementInput;
@@ -11,7 +10,6 @@ public class PlayerBehaviour : MonoBehaviour
     void Start()
     {
         // Initialize the imported classes
-        _sprite = GetComponent<SpriteRenderer>();
         _movement = GetComponent<MovementBehaviour>();
         _shotBehaviour = GetComponent<ShootBehaviour>();
     }

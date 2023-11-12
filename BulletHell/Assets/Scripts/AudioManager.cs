@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    private static AudioManager Instance;
+    private static AudioManager instance;
 
     // Replace with new system
     private static List<AudioClip> audioList;
@@ -15,15 +16,19 @@ public class AudioManager : MonoBehaviour
     public static float musicVolume {  get; private set; }
     public static float sfxVolume { get; private set; }
     
-    //[SerializeField] private TextMeshProUGUI musicSliderText;
-    //[SerializeField] private TextMeshProUGUI sfxSliderText;
     [SerializeField] private AudioMixerGroup musicGroup;
     [SerializeField] private AudioMixerGroup sfxGroup;
     [SerializeField] private Sound[] sounds;
 
     public void Awake()
     {
-        Instance = this;
+        instance = this;
+
+        if (instance != null)
+        {
+            DontDestroyOnLoad(instance.gameObject);
+        }
+
         audioList = new List<AudioClip>();
 
         foreach (Sound s in sounds)
@@ -53,12 +58,11 @@ public class AudioManager : MonoBehaviour
         for (int i = 0; i < soundList.Length; i++) {
             audioList.Add(soundList[i]);
         }
-
     }
 
     public static void PlaySound(int soundNumber)
     {
-        Instance.gameObject.GetComponent<AudioSource>().PlayOneShot(audioList[soundNumber]);
+        instance.gameObject.GetComponent<AudioSource>().PlayOneShot(audioList[soundNumber]);
     }
 
     public void OnMusicSliderValueChange(float value)

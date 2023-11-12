@@ -1,6 +1,16 @@
 TO DO:
 
+- Volume menu in-game
+
+- Play in-game sounds in audioManager
+
+- Player hit feedback
+
+- Add animation (shield)
+
 - Add enemy spawner + movement
+
+- Add more patterns
 
 - Power UPs
 
@@ -8,24 +18,18 @@ TO DO:
 
 - In game UI (Score, boosters, etc)
 
-- Config menu and pixelate MainMenu
-
 - More SFX(Enemies shooting)
 
--Player hit feedback
-
-- Add more patterns
-
 -------------------------------------------------
+Extra:
 
-- Retro PostFX?
+- Retro PostFX
 
 - Scoreboard
 
 - GameObject pooling
 
-- Blurry sprite when moving
-
+--------------------------------------------------
 BUGS:
 
-- Pause time when win/lose
+- Disable pause menu or input on win/lose
