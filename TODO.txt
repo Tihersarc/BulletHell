@@ -1,5 +1,7 @@
 TO DO:
 
+- Apply font to all texts
+
 - Volume menu in-game
 
 - Play in-game sounds in audioManager
@@ -22,6 +24,8 @@ TO DO:
 
 -------------------------------------------------
 Extra:
+
+- Change button sprite
 
 - Retro PostFX
 
