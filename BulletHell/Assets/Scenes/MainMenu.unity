@@ -2029,7 +2029,7 @@ MonoBehaviour:
     volume: 1
   - audioType: 0
     source: {fileID: 0}
-    clipName: MainSong
+    clipName: Explosion
     audioClip: {fileID: 8300000, guid: fb7b166a51f2ce646adfc666d43da3b8, type: 3}
     isLoop: 0
     playOnAwake: 0

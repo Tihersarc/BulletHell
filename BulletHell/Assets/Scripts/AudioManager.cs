@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -8,17 +9,17 @@ using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
     private static AudioManager audioManager;
-    public static AudioManager instance
+
+    public static AudioManager Instance
     {
         get { return audioManager; }
     }
 
-    // Replace with new system
-    private static List<AudioClip> audioList;
-    [SerializeField] private AudioClip[] soundList;
+    private static List<Sound> soundList;
+    //[SerializeField] private AudioClip[] soundList;
 
-    public static float musicVolume {  get; private set; }
-    public static float sfxVolume { get; private set; }
+    public static float MusicVolume {  get; private set; }
+    public static float SfxVolume { get; private set; }
     
     [SerializeField] private AudioMixerGroup musicGroup;
     [SerializeField] private AudioMixerGroup sfxGroup;
@@ -37,7 +38,7 @@ public class AudioManager : MonoBehaviour
         }
         DontDestroyOnLoad(audioManager.gameObject);
 
-        audioList = new List<AudioClip>();
+        //soundList = new List<AudioClip>();
 
         foreach (Sound s in sounds)
         {
@@ -63,25 +64,27 @@ public class AudioManager : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < soundList.Length; i++) {
-            audioList.Add(soundList[i]);
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            soundList.Add(sounds[i]);
         }
     }
 
     public static void PlaySound(int soundNumber)
     {
-        audioManager.gameObject.GetComponent<AudioSource>().PlayOneShot(audioList[soundNumber]);
+        //audioManager.gameObject.GetComponent<AudioSource>().PlayOneShot(soundList[soundNumber]);
+        audioManager.gameObject.GetComponent<AudioSource>().PlayOneShot(soundList.ElementAt(soundNumber).audioClip);
     }
 
     public void OnMusicSliderValueChange(float value)
     {
-        musicVolume = value;
+        MusicVolume = value;
         musicGroup.audioMixer.SetFloat("MusicVolume", Mathf.Log10(value) * 20);
     }
 
     public void OnSfxSliderValueChange(float value)
     {
-        sfxVolume = value;
+        SfxVolume = value;
         sfxGroup.audioMixer.SetFloat("SfxVolume", Mathf.Log10(value)*20);
     }
 }
