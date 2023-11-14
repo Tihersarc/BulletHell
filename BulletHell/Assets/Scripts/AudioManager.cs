@@ -22,12 +22,16 @@ public class AudioManager : MonoBehaviour
 
     public void Awake()
     {
-        instance = this;
 
         if (instance != null)
         {
-            DontDestroyOnLoad(instance.gameObject);
+            Destroy(this);
         }
+        else
+        {
+            instance = this;
+        }
+        DontDestroyOnLoad(instance.gameObject);
 
         audioList = new List<AudioClip>();
 

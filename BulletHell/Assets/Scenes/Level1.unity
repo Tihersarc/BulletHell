@@ -1124,6 +1124,10 @@ PrefabInstance:
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6261370516837188068, guid: 0367908088a51dd49bf14054a77efbd9, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6998348636278106032, guid: 0367908088a51dd49bf14054a77efbd9, type: 3}
       propertyPath: m_IsTrigger
       value: 0
