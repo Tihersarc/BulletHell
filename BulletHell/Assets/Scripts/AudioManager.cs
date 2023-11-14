@@ -7,7 +7,11 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    private static AudioManager instance;
+    private static AudioManager audioManager;
+    public static AudioManager instance
+    {
+        get { return audioManager; }
+    }
 
     // Replace with new system
     private static List<AudioClip> audioList;
@@ -23,15 +27,15 @@ public class AudioManager : MonoBehaviour
     public void Awake()
     {
 
-        if (instance != null)
+        if (audioManager != null)
         {
             Destroy(this);
         }
         else
         {
-            instance = this;
+            audioManager = this;
         }
-        DontDestroyOnLoad(instance.gameObject);
+        DontDestroyOnLoad(audioManager.gameObject);
 
         audioList = new List<AudioClip>();
 
@@ -66,7 +70,7 @@ public class AudioManager : MonoBehaviour
 
     public static void PlaySound(int soundNumber)
     {
-        instance.gameObject.GetComponent<AudioSource>().PlayOneShot(audioList[soundNumber]);
+        audioManager.gameObject.GetComponent<AudioSource>().PlayOneShot(audioList[soundNumber]);
     }
 
     public void OnMusicSliderValueChange(float value)

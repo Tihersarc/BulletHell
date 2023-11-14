@@ -1,0 +1,14 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ScrollBehaviour : MonoBehaviour
+{
+    [SerializeField] private float speed;
+    [SerializeField] private Renderer bgRenderer;
+
+    void Update()
+    {
+        bgRenderer.material.mainTextureOffset += new Vector2(0, speed * Time.deltaTime);
+    }
+}
