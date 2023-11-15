@@ -30,6 +30,6 @@ public class DestroyBehaviour : MonoBehaviour
         {
             AudioManager.PlaySound(1);
         }
-        this.enabled = false;
+        gameObject.SetActive(false);
     }
 }

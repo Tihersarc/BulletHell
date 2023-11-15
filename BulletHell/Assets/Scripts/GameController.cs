@@ -25,13 +25,13 @@ public class GameController : MonoBehaviour
 
     public void LevelFinished()
     {
-        OnLevelFinish.Invoke();
-        Debug.Log("Level Finished");
+        //OnLevelFinish.Invoke();
+        //Debug.Log("Level Finished");
     }
 
     public void LevelFailed()
     {
-        OnLevelFail.Invoke();
-        Debug.Log("Level Failed");
+        //OnLevelFail.Invoke();
+        //Debug.Log("Level Failed");
     }
 }

@@ -74,7 +74,6 @@ public class AudioManager : MonoBehaviour
 
     public static void PlaySound(int soundNumber)
     {
-        //audioManager.gameObject.GetComponent<AudioSource>().PlayOneShot(soundList[soundNumber]);
         audioManager.gameObject.GetComponent<AudioSource>().PlayOneShot(soundList.ElementAt(soundNumber).audioClip);
     }
 

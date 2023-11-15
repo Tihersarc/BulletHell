@@ -18,42 +18,32 @@ public class InstantiationManager : MonoBehaviour
 
     private void Start()
     {
+        totalTime = 0f;
         StartCoroutine(EnemySpawning());
-    }
-
-    private void Update()
-    {
-        //totalTime += Time.deltaTime;
-
-        //while (enemyInstantiations.Count > 0)
-        //{
-        //    foreach (EnemyInstantiation e in enemyInstantiations)
-        //    {
-        //        if (e.timeToInstantiate >= totalTime)
-        //        {
-        //            Instantiate(e.enemyToInstantiate);
-        //            //enemyInstantiations.Remove(e);
-        //        }
-        //    }
-        //}
     }
 
     IEnumerator EnemySpawning()
     {
-        totalTime += Time.deltaTime;
-
         while (enemyInstantiations.Count > 0)
         {
-            foreach (EnemyInstantiation e in enemyInstantiations)
+            totalTime += Time.deltaTime;
+            for (int i = enemyInstantiations.Count - 1; i >= 0; i--)
             {
-                if (e.timeToInstantiate >= totalTime)
+                EnemyInstantiation e = enemyInstantiations[i];
+                if (e.timeToInstantiate <= totalTime)
                 {
-                    Instantiate(e.enemyToInstantiate);
-                    //enemyInstantiations.Remove(e);
+                    if (e.enemyToInstantiate != null)
+                    {
+                        Instantiate(e.enemyToInstantiate, e.positionToInstantiate, Quaternion.identity);
+                        enemyInstantiations.Remove(e);
+                    }
+                    else
+                    {
+                        Debug.LogError("Trying to instantiate a null object.");
+                    }
                 }
             }
+            yield return null;
         }
-
-        yield return null;
     }
 }
