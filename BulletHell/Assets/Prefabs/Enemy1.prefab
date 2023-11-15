@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 5280330456700795766}
   - component: {fileID: 8213570584222754549}
   - component: {fileID: 7101563014742887873}
+  - component: {fileID: 2392197840818539356}
   m_Layer: 8
   m_Name: Enemy1
   m_TagString: Enemy
@@ -235,18 +236,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19b21481f939dd4fb34d600e45df440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 1
-  _currentHealth: 0
+  maxHealth: 0
+  currentHealth: 0
   OnHealthChange:
     m_PersistentCalls:
       m_Calls: []
   OnDie:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7199610786738190648}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2392197840818539356}
+        m_TargetAssemblyTypeName: DestroyBehaviour, Assembly-CSharp
+        m_MethodName: DisableObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -297,3 +298,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: 3167745528655570432, guid: 3f0bf7545a997694293fc2334ae18a98, type: 3}
   _shootPoint: {fileID: 1325811522839738462}
+--- !u!114 &2392197840818539356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7199610786738190648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274c5df1740f3d5419b0521679603219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathAnimation: {fileID: 0}
+  soundOnDestroy: 1

@@ -16,8 +16,29 @@ public class InstantiationManager : MonoBehaviour
 
     private float totalTime;
 
-    // Poner en corutina-----------------------------------------------
+    private void Start()
+    {
+        StartCoroutine(EnemySpawning());
+    }
+
     private void Update()
+    {
+        //totalTime += Time.deltaTime;
+
+        //while (enemyInstantiations.Count > 0)
+        //{
+        //    foreach (EnemyInstantiation e in enemyInstantiations)
+        //    {
+        //        if (e.timeToInstantiate >= totalTime)
+        //        {
+        //            Instantiate(e.enemyToInstantiate);
+        //            //enemyInstantiations.Remove(e);
+        //        }
+        //    }
+        //}
+    }
+
+    IEnumerator EnemySpawning()
     {
         totalTime += Time.deltaTime;
 
@@ -32,6 +53,7 @@ public class InstantiationManager : MonoBehaviour
                 }
             }
         }
-    }
 
+        yield return null;
+    }
 }

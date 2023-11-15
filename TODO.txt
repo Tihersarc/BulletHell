@@ -1,5 +1,6 @@
 TO DO:
 
+- Fix death sound
 - AudioPlayer in game
 
 - Apply font to all texts

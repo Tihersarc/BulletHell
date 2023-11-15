@@ -15,7 +15,7 @@ public class AudioManager : MonoBehaviour
         get { return audioManager; }
     }
 
-    private static List<Sound> soundList;
+    //private static List<Sound> soundList;
     //[SerializeField] private AudioClip[] soundList;
 
     public static float MusicVolume {  get; private set; }
@@ -24,6 +24,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioMixerGroup musicGroup;
     [SerializeField] private AudioMixerGroup sfxGroup;
     [SerializeField] private Sound[] sounds;
+    private static List<Sound> soundList;
 
     public void Awake()
     {
@@ -64,6 +65,7 @@ public class AudioManager : MonoBehaviour
             }
         }
 
+        soundList = new List<Sound>();
         for (int i = 0; i < sounds.Length; i++)
         {
             soundList.Add(sounds[i]);
