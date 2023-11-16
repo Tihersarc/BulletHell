@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 5624928134154473795}
   - component: {fileID: 297646228899135245}
   - component: {fileID: 8782455145259170688}
+  - component: {fileID: -5437626725581172230}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -290,8 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19b21481f939dd4fb34d600e45df440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 5
-  _currentHealth: 0
+  maxHealth: 0
+  currentHealth: 0
   OnHealthChange:
     m_PersistentCalls:
       m_Calls: []
@@ -324,6 +325,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: 3167745528655570432, guid: b12aacd02ca4fff4ca99498fb692c95a, type: 3}
   _shootPoint: {fileID: 6261370516837188068}
+--- !u!114 &-5437626725581172230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167564489057315306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adbd751c5383a8442aa5433af544d931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 1f71424c09c1a174ab765bf7755d82b5, type: 2}
+  duration: 0.2
 --- !u!1 &6261370516837188068
 GameObject:
   m_ObjectHideFlags: 0

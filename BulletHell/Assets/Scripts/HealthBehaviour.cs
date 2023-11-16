@@ -11,6 +11,8 @@ public class HealthBehaviour : MonoBehaviour
 
     public UnityEvent OnHealthChange;
 
+    public UnityEvent OnDamage;
+
     public UnityEvent OnDie;
     
     void Start()
@@ -39,6 +41,7 @@ public class HealthBehaviour : MonoBehaviour
         }
 
         OnHealthChange.Invoke();
+        OnDamage.Invoke();
     }
 
     public float GetCurrentHealth()

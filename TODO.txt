@@ -1,29 +1,18 @@
 TO DO:
 
-- Fix death sound
-- AudioPlayer in game
-
 - Apply font to all texts
 
 - Volume menu in-game
 
-- Play in-game sounds in audioManager
-
-- Player hit feedback
-
-- Add animation (shield)
-
-- Add enemy spawner + movement
-
-- Add more patterns
+- Add enemy movement after spawn
 
 - Power UPs
-
-- Improve background scroll
 
 - In game UI (Score, boosters, etc)
 
 - More SFX(Enemies shooting)
+
+- Add more patterns
 
 -------------------------------------------------
 Extra:
@@ -37,4 +26,6 @@ Extra:
 --------------------------------------------------
 BUGS:
 
-- Disable pause menu or input on win/lose
+- Disable pause menu or input on win/lose (Disable player controller)
+
+- Improve background scroll
