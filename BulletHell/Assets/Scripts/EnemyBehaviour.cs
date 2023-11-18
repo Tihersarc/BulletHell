@@ -54,7 +54,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (timer >= shootingRate)
         {
-            shootBehaviour.Shoot();
+            shootBehaviour.ShootPlayer();
             timer = 0f;
             //Test();
         }

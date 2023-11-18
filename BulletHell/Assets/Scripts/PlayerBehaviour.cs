@@ -3,15 +3,20 @@ using UnityEngine.InputSystem;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    private MovementBehaviour _movement;
-    private ShootBehaviour _shotBehaviour;
+    [SerializeField] private GameObject shield;
+    public GameObject ShieldInstance { get;  private set; }
+
+    private MovementBehaviour movement;
+    private ShootBehaviour shotBehaviour;
+    private Animator animator;
     private Vector2 movementInput;
 
     void Start()
     {
         // Initialize the imported classes
-        _movement = GetComponent<MovementBehaviour>();
-        _shotBehaviour = GetComponent<ShootBehaviour>();
+        movement = GetComponent<MovementBehaviour>();
+        shotBehaviour = GetComponent<ShootBehaviour>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -22,21 +27,50 @@ public class PlayerBehaviour : MonoBehaviour
             Debug.Log("Godmode toggled");
             GetComponent<HealthBehaviour>().enabled = !GetComponent<HealthBehaviour>().enabled;
         }
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            Debug.Log("Shield activated");
+            EnableShield();
+        }
     }
 
     private void FixedUpdate()
     {
-        _movement.Move(movementInput);
+        movement.Move(movementInput);
+    }
+
+    public void EnableShield()
+    {
+        ShieldInstance = Instantiate(shield, transform.position, Quaternion.identity, transform);
+    }
+
+    public void DisableShield()
+    {
+        Object.Destroy(ShieldInstance);
     }
 
     void OnFire()
     {
-        _shotBehaviour.Shoot();
+        shotBehaviour.Shoot();
     }
 
     void OnMove(InputValue input)
     {
         movementInput = input.Get<Vector2>();
+        float xInput = movementInput.x;
+
+        if (xInput > 0f)
+        {
+            animator.SetInteger("state", 2);
+        }
+        else if (xInput < 0f) 
+        {
+            animator.SetInteger("state", 1);
+        }
+        else
+        {
+            animator.SetInteger("state", 0);
+        }
     }
 
     private void OnPause()

@@ -3,7 +3,6 @@ using UnityEngine;
 public class BulletBehaviour : MonoBehaviour
 {
     private MovementBehaviour _movement;
-    private Vector3 direction;
 
     void Start()
     {
@@ -12,12 +11,7 @@ public class BulletBehaviour : MonoBehaviour
 
     void FixedUpdate()
     {
-        _movement.Move(direction);
-    }
-
-    public void Init(Vector3 dir)
-    {
-        direction = dir;
+        _movement.Move();
     }
 
     private void OnBecameInvisible()

@@ -15,13 +15,16 @@ public class ShootBehaviour : MonoBehaviour
     public void Shoot()
     {
         GameObject bulletInstance = Instantiate(_bullet, _shootPoint.transform.position, _shootPoint.transform.rotation);
-        bulletInstance.GetComponent<BulletBehaviour>().Init(_shootPoint.transform.right);
+        bulletInstance.GetComponent<MovementBehaviour>().SetDirection(_shootPoint.transform.right);
     }
 
     public void ShootPlayer()
     {
+        Vector3 playerDirection = player.transform.position - _shootPoint.transform.position;
+
+
         GameObject bulletInstance = Instantiate(_bullet, _shootPoint.transform.position, _shootPoint.transform.rotation);
-        bulletInstance.GetComponent<BulletBehaviour>().Init(_shootPoint.transform.right);
+        bulletInstance.GetComponent<MovementBehaviour>().SetDirection(playerDirection);
 
     }
 

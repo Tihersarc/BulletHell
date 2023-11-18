@@ -139,7 +139,7 @@ TextureImporter:
         width: 43
         height: 61
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,6 +147,27 @@ TextureImporter:
       bones: []
       spriteID: d01d1a2dbb8bf7b44ab78dcc3da4bfe2
       internalID: 226963877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eurofighter_2
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 78
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6208f6241309a384b9cf12d36c7d5ecf
+      internalID: 1974213998
       vertices: []
       indices: 
       edges: []
@@ -164,6 +185,7 @@ TextureImporter:
     nameFileIdTable:
       Eurofighter_0: 614589177
       Eurofighter_1: 226963877
+      Eurofighter_2: 1974213998
       Eurofighter_NoBackground_0: -15423634
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
