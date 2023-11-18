@@ -1,14 +1,12 @@
 TO DO:
 
-- Player animation
-
 - Power UPs
 
 - In game UI (Score, boosters, etc)
 
-- More SFX(Enemies shooting)
+- Cam controller (shake)
 
-- Add more patterns
+
 
 -------------------------------------------------
 Extra:
@@ -21,6 +19,10 @@ Extra:
 
 --------------------------------------------------
 BUGS:
+
+- Add more patterns
+
+- More SFX(Enemies shooting)
 
 - Disable pause menu or input on win/lose (Disable player controller)
 

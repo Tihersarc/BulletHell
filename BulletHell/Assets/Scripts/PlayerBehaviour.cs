@@ -3,9 +3,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    [SerializeField] private GameObject shield;
-    public GameObject ShieldInstance { get;  private set; }
-
     private MovementBehaviour movement;
     private ShootBehaviour shotBehaviour;
     private Animator animator;
@@ -30,7 +27,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.H))
         {
             Debug.Log("Shield activated");
-            EnableShield();
+            GetComponent<ShieldBehaviour>().EnableShield();
         }
     }
 
@@ -39,15 +36,7 @@ public class PlayerBehaviour : MonoBehaviour
         movement.Move(movementInput);
     }
 
-    public void EnableShield()
-    {
-        ShieldInstance = Instantiate(shield, transform.position, Quaternion.identity, transform);
-    }
-
-    public void DisableShield()
-    {
-        Object.Destroy(ShieldInstance);
-    }
+    
 
     void OnFire()
     {

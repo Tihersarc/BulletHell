@@ -17,7 +17,7 @@ TagManager:
   - Enemy
   - PlayerBullet
   - EnemyBullet
-  - 
+  - Item
   - 
   - 
   - 
@@ -53,4 +53,7 @@ TagManager:
     locked: 0
   - name: Bullet
     uniqueID: 3743760061
+    locked: 0
+  - name: Effects
+    uniqueID: 1218095881
     locked: 0

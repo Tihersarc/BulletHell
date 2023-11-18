@@ -31,17 +31,24 @@ public class HealthBehaviour : MonoBehaviour
 
     public void Damage(int damage)
     {
-        currentHealth -= damage;
-
-
-        if (currentHealth <= 0)
+        if (TryGetComponent<ShieldBehaviour>(out ShieldBehaviour s) && s.ShieldInstance != null && s.enabled)
         {
-            currentHealth = 0;
-            OnDie.Invoke();
+            s.DisableShield();
         }
+        else
+        {
+            currentHealth -= damage;
 
-        OnHealthChange.Invoke();
-        OnDamage.Invoke();
+
+            if (currentHealth <= 0)
+            {
+                currentHealth = 0;
+                OnDie.Invoke();
+            }
+
+            OnHealthChange.Invoke();
+            OnDamage.Invoke();
+        }
     }
 
     public float GetCurrentHealth()
