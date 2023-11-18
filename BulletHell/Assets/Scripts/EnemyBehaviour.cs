@@ -6,10 +6,9 @@ public class EnemyBehaviour : MonoBehaviour
     enum Direction { Left, Right }
 
     private GameObject shootPoint;
-
     private GameController gameController;
-
     private ShootBehaviour shootBehaviour;
+    private MovementBehaviour mvb;
 
     //private float rotation;
     private float timer;
@@ -27,12 +26,18 @@ public class EnemyBehaviour : MonoBehaviour
         shootPoint = this.GetComponent<ShootBehaviour>().GetShootPoint();
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         shootBehaviour = GetComponent<ShootBehaviour>();
+        mvb = GetComponent<MovementBehaviour>();
         timer = 0f;
     }
 
 
     void Update()
     {
+        if (mvb.GetSpeed() != 0f && !Vector3.Equals(mvb.GetDirection(), Vector3.zero))
+        {
+            mvb.MoveTransform();
+        }
+
         timer += Time.deltaTime;
 
         if (pattern == Pattern.Spin)
@@ -69,5 +74,10 @@ public class EnemyBehaviour : MonoBehaviour
     public void Remove()
     {
         gameController.RemoveEnemy();
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(this.gameObject);
     }
 }

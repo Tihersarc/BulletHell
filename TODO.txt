@@ -1,10 +1,6 @@
 TO DO:
 
-- Apply font to all texts
-
-- Volume menu in-game
-
-- Add enemy movement after spawn
+- Player animation
 
 - Power UPs
 
@@ -28,4 +24,4 @@ BUGS:
 
 - Disable pause menu or input on win/lose (Disable player controller)
 
-- Improve background scroll
+- Fix volume/slider initialization

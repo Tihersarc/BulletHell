@@ -15,9 +15,6 @@ public class AudioManager : MonoBehaviour
         get { return audioManager; }
     }
 
-    //private static List<Sound> soundList;
-    //[SerializeField] private AudioClip[] soundList;
-
     public static float MusicVolume {  get; private set; }
     public static float SfxVolume { get; private set; }
     
@@ -38,8 +35,6 @@ public class AudioManager : MonoBehaviour
             audioManager = this;
         }
         DontDestroyOnLoad(audioManager.gameObject);
-
-        //soundList = new List<AudioClip>();
 
         foreach (Sound s in sounds)
         {

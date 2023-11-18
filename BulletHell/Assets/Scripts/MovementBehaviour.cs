@@ -19,12 +19,33 @@ public class MovementBehaviour : MonoBehaviour
         speed = s;
     }
 
-    public void SetDirection(Vector3 direction)
+    public float GetSpeed()
     {
-        this.direction = direction;
+        return speed;
     }
 
-    public void Move(Vector3 direction)
+    public void SetDirection(Vector3 dir)
+    {
+        this.direction = dir;
+    }
+
+    public Vector3 GetDirection()
+    {
+        return this.direction;
+    }
+
+    public void SetRotationToDirection()
+    {
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+    }
+
+    public void Move(Vector3 dir)
+    {
+        direction.Normalize();
+        rb.velocity = speed * dir;
+    }
+
+    public void Move()
     {
         direction.Normalize();
         rb.velocity = speed * direction;

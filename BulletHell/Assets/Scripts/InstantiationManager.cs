@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InstantiationManager : MonoBehaviour
@@ -34,7 +35,10 @@ public class InstantiationManager : MonoBehaviour
                 {
                     if (e.enemyToInstantiate != null)
                     {
-                        Instantiate(e.enemyToInstantiate, e.positionToInstantiate, Quaternion.identity);
+                        GameObject g = Instantiate(e.enemyToInstantiate, e.positionToInstantiate, Quaternion.identity);
+                        g.GetComponent<MovementBehaviour>().SetDirection(Vector3.down);
+                        g.GetComponent<MovementBehaviour>().SetRotationToDirection();
+
                         enemyInstantiations.Remove(e);
                     }
                     else
