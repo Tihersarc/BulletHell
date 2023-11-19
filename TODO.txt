@@ -8,11 +8,12 @@ TO DO:
 
 - Add training / hard mode
 
+-------------------------------------------------
+Extra:
+
 - Zoom out on start + fade
 
 - Menu controlled with controls
--------------------------------------------------
-Extra:
 
 - Afterburner particles
 
