@@ -30,6 +30,7 @@ public class InstantiationManager : MonoBehaviour
         while (enemyInstantiations.Count > 0)
         {
             totalTime += Time.deltaTime;
+
             for (int i = enemyInstantiations.Count - 1; i >= 0; i--)
             {
                 EnemyInstantiation e = enemyInstantiations[i];
@@ -40,7 +41,11 @@ public class InstantiationManager : MonoBehaviour
                         Vector2 positionToInstantiate = new(e.positionX, e.positionY);
                         GameObject g = Instantiate(e.enemyToInstantiate, positionToInstantiate, Quaternion.identity);
                         g.GetComponent<MovementBehaviour>().SetDirection(Vector3.down);
-                        g.GetComponent<MovementBehaviour>().SetRotationToDirection();
+
+                        if (g.TryGetComponent(out EnemyBehaviour ebhv))
+                        {
+                            g.GetComponent<MovementBehaviour>().SetRotationToDirection();
+                        }
 
                         enemyInstantiations.Remove(e);
                     }

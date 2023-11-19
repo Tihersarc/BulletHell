@@ -39,6 +39,13 @@ public class MovementBehaviour : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
     }
 
+    public void SetRotationToDirection(float offset)
+    {
+        Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, new Vector3(direction.x, direction.y, direction.z));
+        Quaternion finalRotation = Quaternion.Euler(0,0, offset) * targetRotation;
+        transform.rotation = finalRotation;
+    }
+
     public void Move(Vector3 dir)
     {
         direction.Normalize();

@@ -7,6 +7,7 @@ public class BulletBehaviour : MonoBehaviour
     void Start()
     {
         _movement = GetComponent<MovementBehaviour>();
+        _movement.SetRotationToDirection(90f);
     }
 
     void FixedUpdate()

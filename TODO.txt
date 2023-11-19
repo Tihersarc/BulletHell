@@ -1,15 +1,15 @@
 TO DO:
 
-- In game UI (Score, boosters, etc)
-
-- Balance enemies
-
 - Check Build
 
 - Add training / hard mode
 
 -------------------------------------------------
 Extra:
+
+- Environment FX
+
+- In game UI (Score, boosters, etc)
 
 - Zoom out on start + fade
 

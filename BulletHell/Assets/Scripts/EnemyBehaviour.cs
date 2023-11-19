@@ -40,23 +40,25 @@ public class EnemyBehaviour : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        if (pattern == Pattern.Spin)
-        {
-            if (rotationDirection == Direction.Left)
-            {
-                shootPoint.transform.eulerAngles = new Vector3(0f, 0f, shootPoint.transform.eulerAngles.z + -rotationRate);
-            }
-            else
-            {
-                shootPoint.transform.eulerAngles = new Vector3(0f, 0f, shootPoint.transform.eulerAngles.z + rotationRate);
-            }
-        }
-
         if (timer >= shootingRate)
         {
-            shootBehaviour.ShootPlayer();
+            if (pattern == Pattern.Spin)
+            {
+                if (rotationDirection == Direction.Left)
+                {
+                    shootPoint.transform.eulerAngles = new Vector3(0f, 0f, shootPoint.transform.eulerAngles.z + -rotationRate);
+                }
+                else
+                {
+                    shootPoint.transform.eulerAngles = new Vector3(0f, 0f, shootPoint.transform.eulerAngles.z + rotationRate);
+                }
+                shootBehaviour.Shoot();
+            }
+            if (pattern == Pattern.Straight)
+            {
+                shootBehaviour.ShootPlayer();
+            }
             timer = 0f;
-            //Test();
         }
     }
 
