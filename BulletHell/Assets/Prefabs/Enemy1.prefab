@@ -366,5 +366,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274c5df1740f3d5419b0521679603219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathAnimation: {fileID: 0}
+  deathAnimation: {fileID: 6762275926937876459, guid: ecd228a3fc692a842ab12afa86f92cda, type: 3}
   soundOnDestroy: 1

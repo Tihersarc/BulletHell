@@ -3,10 +3,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerBehaviour : MonoBehaviour
 {
+    
     private MovementBehaviour movement;
     private ShootBehaviour shotBehaviour;
     private Animator animator;
     private Vector2 movementInput;
+    private ParticleSystem speedParticles;
 
     void Start()
     {
@@ -14,6 +16,8 @@ public class PlayerBehaviour : MonoBehaviour
         movement = GetComponent<MovementBehaviour>();
         shotBehaviour = GetComponent<ShootBehaviour>();
         animator = GetComponentInChildren<Animator>();
+        speedParticles = GetComponentInChildren<ParticleSystem>();
+        speedParticles.Stop();
     }
 
     void Update()
@@ -47,6 +51,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         movementInput = input.Get<Vector2>();
         float xInput = movementInput.x;
+        float yInput = movementInput.y;
 
         if (xInput > 0f)
         {
@@ -59,6 +64,15 @@ public class PlayerBehaviour : MonoBehaviour
         else
         {
             animator.SetInteger("state", 0);
+        }
+
+        if (yInput > 0f)
+        {
+            speedParticles.Play();
+        }
+        else
+        {
+            speedParticles.Stop();
         }
     }
 

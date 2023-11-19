@@ -9,7 +9,9 @@ public class InstantiationManager : MonoBehaviour
     public class EnemyInstantiation
     {
         public GameObject enemyToInstantiate;
-        public Vector2 positionToInstantiate; // Add X range -8 to 8
+        [Range(-8f, 8f)]
+        public float positionX; // Add X range -8 to 8
+        public float positionY;
         public float timeToInstantiate;
     }
 
@@ -35,7 +37,8 @@ public class InstantiationManager : MonoBehaviour
                 {
                     if (e.enemyToInstantiate != null)
                     {
-                        GameObject g = Instantiate(e.enemyToInstantiate, e.positionToInstantiate, Quaternion.identity);
+                        Vector2 positionToInstantiate = new(e.positionX, e.positionY);
+                        GameObject g = Instantiate(e.enemyToInstantiate, positionToInstantiate, Quaternion.identity);
                         g.GetComponent<MovementBehaviour>().SetDirection(Vector3.down);
                         g.GetComponent<MovementBehaviour>().SetRotationToDirection();
 

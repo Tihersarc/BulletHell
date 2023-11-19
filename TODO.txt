@@ -1,15 +1,26 @@
 TO DO:
 
-- Power UPs
-
 - In game UI (Score, boosters, etc)
 
-- Cam controller (shake)
+- Cam controller (shake on hit) + Zoom out on start + fade
 
+- Balance enemies
 
+- GDD
 
+- TXT with controls
+
+- Add music on menu, win and lose
+
+- Check Build
+
+- Add training / hard mode
+
+- Menu controlled with controls
 -------------------------------------------------
 Extra:
+
+- Afterburner particles
 
 - Retro PostFX
 
@@ -19,6 +30,8 @@ Extra:
 
 --------------------------------------------------
 BUGS:
+
+- Fix errors
 
 - Add more patterns
 
