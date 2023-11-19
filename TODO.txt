@@ -2,19 +2,13 @@ TO DO:
 
 - In game UI (Score, boosters, etc)
 
-- Cam controller (shake on hit) + Zoom out on start + fade
-
 - Balance enemies
-
-- GDD
-
-- TXT with controls
-
-- Add music on menu, win and lose
 
 - Check Build
 
 - Add training / hard mode
+
+- Zoom out on start + fade
 
 - Menu controlled with controls
 -------------------------------------------------
@@ -28,8 +22,16 @@ Extra:
 
 - GameObject pooling
 
+- Clean code
+
 --------------------------------------------------
 BUGS:
+
+- Fix bullet sprite orientation
+
+- Check win music
+
+- Add coroutine to the end of the game
 
 - Fix errors
 

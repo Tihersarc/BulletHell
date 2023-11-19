@@ -71,10 +71,10 @@ public class EnemyBehaviour : MonoBehaviour
         x++;
     }
 
-    public void Remove()
-    {
-        gameController.RemoveEnemy();
-    }
+    //public void Remove()
+    //{
+    //    gameController.RemoveEnemy();
+    //}
 
     private void OnBecameInvisible()
     {

@@ -10,28 +10,28 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        //enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
         Time.timeScale = 1.0f;
     }
 
-    public void RemoveEnemy()
-    {
-        enemyCount--;
+    //public void RemoveEnemy()
+    //{
+    //    enemyCount--;
 
-        if (enemyCount <= 0 ) {
-             LevelFinished();
-        }
-    }
+    //    if (enemyCount <= 0 ) {
+    //         LevelFinished();
+    //    }
+    //}
 
     public void LevelFinished()
     {
-        //OnLevelFinish.Invoke();
-        //Debug.Log("Level Finished");
+        OnLevelFinish.Invoke();
+        Debug.Log("Level Finished");
     }
 
     public void LevelFailed()
     {
-        //OnLevelFail.Invoke();
-        //Debug.Log("Level Failed");
+        OnLevelFail.Invoke();
+        Debug.Log("Level Failed");
     }
 }

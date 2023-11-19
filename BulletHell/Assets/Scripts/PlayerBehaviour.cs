@@ -53,11 +53,11 @@ public class PlayerBehaviour : MonoBehaviour
         float xInput = movementInput.x;
         float yInput = movementInput.y;
 
-        if (xInput > 0f)
+        if (xInput > 0.1f)
         {
             animator.SetInteger("state", 2);
         }
-        else if (xInput < 0f) 
+        else if (xInput < -0.1f) 
         {
             animator.SetInteger("state", 1);
         }

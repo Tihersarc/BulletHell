@@ -20,6 +20,16 @@ public class AudioPlayer : MonoBehaviour
         AudioManager.PlaySound(deathIndex);
     }
 
+    public void Play(string s)
+    {
+        AudioManager.Play(s);
+    }
+
+    public void Stop(string s)
+    {
+        AudioManager.Stop(s);
+    }
+
     public void OnMusicSliderValueChange(float val)
     {
         AudioManager.Instance.OnMusicSliderValueChange(val);

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -20,7 +21,7 @@ public class AudioManager : MonoBehaviour
     
     [SerializeField] private AudioMixerGroup musicGroup;
     [SerializeField] private AudioMixerGroup sfxGroup;
-    [SerializeField] private Sound[] sounds;
+    [SerializeField] private List<Sound> sounds;
     private static List<Sound> soundList;
 
     public void Awake()
@@ -61,7 +62,7 @@ public class AudioManager : MonoBehaviour
         }
 
         soundList = new List<Sound>();
-        for (int i = 0; i < sounds.Length; i++)
+        for (int i = 0; i < sounds.Count; i++)
         {
             soundList.Add(sounds[i]);
         }
@@ -70,6 +71,39 @@ public class AudioManager : MonoBehaviour
     public static void PlaySound(int soundNumber)
     {
         audioManager.gameObject.GetComponent<AudioSource>().PlayOneShot(soundList.ElementAt(soundNumber).audioClip);
+    }
+
+    public static void Play(string clipname)
+    {
+        Sound s = soundList.Find(sound => sound.clipName == clipname);
+        //Array.Find(soundList, dummySound => dummySound.clipName == clipname);
+
+        if (s == null)
+        {
+            Debug.LogError("Sound: " + clipname + " does NOT exist!");
+        }
+        else
+        {
+            s.source.Play();
+            Debug.Log("Sound: " + clipname + " now playing.");
+        }
+    }
+
+    public static void Stop(string clipname)
+    {
+        Sound s = soundList.Find(sound => sound.clipName == clipname);
+        //Array.Find(soundList, dummySound => dummySound.clipName == clipname);
+
+        if (s == null)
+        {
+            Debug.LogError("Sound: " + clipname + " does NOT exist!");
+            return;
+        }
+        else
+        {
+            Debug.Log("Sound: " + clipname + " stopped playing.");
+            s.source.Stop();
+        }
     }
 
     public void OnMusicSliderValueChange(float value)

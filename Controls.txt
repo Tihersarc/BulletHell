@@ -1,0 +1,5 @@
+MOVE: WASD / Move LS
+
+SHOOT: LeftClick / Spacebar / Right Trigger / A button (XBOX)
+
+PAUSE: Escape / Select
