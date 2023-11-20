@@ -1,37 +1,133 @@
+using System.Collections;
 using UnityEngine;
 
 public class BossBehaviour : EnemyBehaviour
 {
-    
+    private enum BossState
+    {
+        Spin,
+        Homing,
+        Cooldown
+    }
+
+    [SerializeField] private float spinLength;
+    [SerializeField] private float homingLength;
+    [SerializeField] private float cooldownLength;
+    [SerializeField] private float spinShootingRate;
+    [SerializeField] private float homingShootingRate;
+
+    private BossState currentState = BossState.Cooldown;
+    private float stateTimer;
+
+    private void Start()
+    {
+        base.Init();
+        stateTimer = 0f;
+        timer = 0f;
+    }
+
+    private void Update()
+    {
+        mvb.MoveTransform();
+
+        EnemyShooting();
+    }
+
+    //protected override void EnemyShooting()
+    //{
+    //    if (mvb.GetSpeed() != 0f && !Vector3.Equals(mvb.GetDirection(), Vector3.zero))
+    //    {
+    //        mvb.MoveTransform();
+    //    }
+
+    //    timer += Time.deltaTime;
+
+    //    if (timer >= shootingRate)
+    //    {
+    //        if (pattern == Pattern.Spin)
+    //        {
+    //            ShootSpin();
+    //        }
+    //        if (pattern == Pattern.Straight)
+    //        {
+    //            ShootHoming();
+    //        }
+    //        timer = 0f;
+    //    }
+    //}
+
     protected override void EnemyShooting()
     {
-        if (mvb.GetSpeed() != 0f && !Vector3.Equals(mvb.GetDirection(), Vector3.zero))
-        {
-            mvb.MoveTransform();
-        }
-
         timer += Time.deltaTime;
+        stateTimer += Time.deltaTime;
 
-        if (timer >= shootingRate)
+
+        switch (currentState)
         {
-            if (pattern == Pattern.Spin)
-            {
-                if (rotationDirection == Direction.Left)
+            case BossState.Spin:
+                if (timer >= spinShootingRate)
                 {
-                    shootPoint.transform.eulerAngles = new Vector3(0f, 0f, shootPoint.transform.eulerAngles.z + -rotationRate);
+                    ShootSpin();
+                    timer = 0f;
                 }
-                else
+
+                if (stateTimer >= spinLength)
                 {
-                    shootPoint.transform.eulerAngles = new Vector3(0f, 0f, shootPoint.transform.eulerAngles.z + rotationRate);
+                    stateTimer = 0f;
+                    currentState = BossState.Homing;
                 }
-                shootBehaviour.Shoot();
-            }
-            if (pattern == Pattern.Straight)
-            {
-                shootBehaviour.ShootPlayer();
-            }
-            timer = 0f;
+                break;
+
+            case BossState.Homing:
+                if (timer >= homingShootingRate)
+                {
+                    ShootHoming();
+                    timer = 0f;
+                }
+
+                if (stateTimer >= homingLength)
+                {
+                    stateTimer = 0f;
+                    currentState = BossState.Cooldown;
+                }
+                break;
+
+            case BossState.Cooldown:
+
+                if (stateTimer >= cooldownLength)
+                {
+                    stateTimer = 0f;
+                    currentState = BossState.Spin;
+                }
+                break;
         }
+    }
+    private void ShootSpin()
+    {
+        if (rotationDirection == Direction.Right)
+        {
+            shootPoint.transform.eulerAngles = new Vector3(0f, 0f, shootPoint.transform.eulerAngles.z + rotationRate);
+        }
+        else
+        {
+            shootPoint.transform.eulerAngles = new Vector3(0f, 0f, shootPoint.transform.eulerAngles.z + rotationRate);
+        }
+        shootBehaviour.Shoot();
+    }
+
+    private void ShootHoming()
+    {
+        shootBehaviour.ShootPlayer();
+    }
+
+    IEnumerator AttackPattern()
+    {
+        while (timer <= spinLength)
+        {
+            ShootSpin();
+        }
+
+        yield return null;
     }
 
     protected override void OnBecameInvisible()

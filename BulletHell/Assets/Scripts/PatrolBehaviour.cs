@@ -26,7 +26,6 @@ public class PatrolBehaviour : MonoBehaviour
         waypointIndex = Random.Range(0, waypoints.Count - 1);
         Vector3 dir = (waypoints[waypointIndex].transform.position - transform.position);
         mvb.SetDirection(dir);
-        Debug.Log("cambio de dir " + dir);
     }
 
 

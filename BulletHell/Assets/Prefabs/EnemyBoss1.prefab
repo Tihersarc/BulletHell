@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19b21481f939dd4fb34d600e45df440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 50
   currentHealth: 0
   OnHealthChange:
     m_PersistentCalls:
@@ -241,9 +241,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pattern: 1
-  shootingRate: 0.3
-  rotationRate: 40
+  shootingRate: 0.1
+  rotationRate: 94
   rotationDirection: 1
+  spinLength: 7
+  homingLength: 10
+  cooldownLength: 2
+  spinShootingRate: 0.01
+  homingShootingRate: 0.08
 --- !u!114 &7101563014742887873
 MonoBehaviour:
   m_ObjectHideFlags: 0

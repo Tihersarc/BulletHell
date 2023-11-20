@@ -21,6 +21,11 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Start()
     {
+        Init();
+    }
+
+    protected virtual void Init()
+    {
         shootPoint = this.GetComponent<ShootBehaviour>().GetShootPoint();
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         shootBehaviour = GetComponent<ShootBehaviour>();
@@ -28,19 +33,18 @@ public class EnemyBehaviour : MonoBehaviour
         timer = 0f;
     }
 
-
     void Update()
-    {
-        EnemyShooting();
-    }
-
-    protected virtual void EnemyShooting()
     {
         if (mvb.GetSpeed() != 0f && !Vector3.Equals(mvb.GetDirection(), Vector3.zero))
         {
             mvb.MoveTransform();
         }
 
+        EnemyShooting();
+    }
+
+    protected virtual void EnemyShooting()
+    {
         timer += Time.deltaTime;
 
         if (timer >= shootingRate)

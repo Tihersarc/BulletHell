@@ -25,5 +25,6 @@ public class DamageBehaviour : MonoBehaviour
                 CameraShakeController.instance.CameraShake(impulseSource);
             }
         }
+        Destroy(this.gameObject);
     }
 }

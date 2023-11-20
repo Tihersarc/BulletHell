@@ -10,18 +10,8 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        //enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
         Time.timeScale = 1.0f;
     }
-
-    //public void RemoveEnemy()
-    //{
-    //    enemyCount--;
-
-    //    if (enemyCount <= 0 ) {
-    //         LevelFinished();
-    //    }
-    //}
 
     public void LevelFinished()
     {
