@@ -60,6 +60,7 @@ public class MovementBehaviour : MonoBehaviour
 
     public void MoveTransform()
     {
+        direction.Normalize();
         transform.position += speed * Time.deltaTime * direction;
     }
 }
