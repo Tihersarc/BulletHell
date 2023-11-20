@@ -45,7 +45,6 @@ public class HealthBehaviour : MonoBehaviour
                 currentHealth = 0;
                 OnDie.Invoke();
             }
-
             OnHealthChange.Invoke();
             OnDamage.Invoke();
         }

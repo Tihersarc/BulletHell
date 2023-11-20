@@ -40,8 +40,6 @@ public class PlayerBehaviour : MonoBehaviour
         movement.Move(movementInput);
     }
 
-    
-
     void OnFire()
     {
         shotBehaviour.Shoot();

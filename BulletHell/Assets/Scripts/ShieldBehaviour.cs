@@ -12,7 +12,10 @@ public class ShieldBehaviour : MonoBehaviour
     public void EnableShield()
     {
         IsEnabled = true;
-        ShieldInstance = Instantiate(shield, transform.position, Quaternion.identity, transform);
+        if (ShieldInstance == null)
+        {
+            ShieldInstance = Instantiate(shield, transform.position, Quaternion.identity, transform);
+        }
     }
 
     public void DisableShield()

@@ -6,10 +6,12 @@ public class ShootBehaviour : MonoBehaviour
     [SerializeField] private GameObject _shootPoint;
 
     private GameObject player;
+    private Vector3 playerDirection;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        playerDirection = Vector3.down;
     }
 
     public void Shoot()
@@ -20,7 +22,11 @@ public class ShootBehaviour : MonoBehaviour
 
     public void ShootPlayer()
     {
-        Vector3 playerDirection = player.transform.position - _shootPoint.transform.position;
+        if (player != null)
+        {
+            playerDirection = player.transform.position - _shootPoint.transform.position;
+        }
+        
 
 
         GameObject bulletInstance = Instantiate(_bullet, _shootPoint.transform.position, _shootPoint.transform.rotation);
