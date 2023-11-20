@@ -2,24 +2,22 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    enum Pattern { Straight, Spin }
-    enum Direction { Left, Right }
+    protected enum Pattern { Straight, Spin }
+    protected enum Direction { Left, Right }
 
-    private GameObject shootPoint;
-    private GameController gameController;
-    private ShootBehaviour shootBehaviour;
-    private MovementBehaviour mvb;
-
-    //private float rotation;
-    private float timer;
+    protected GameObject shootPoint;
+    protected GameController gameController;
+    protected ShootBehaviour shootBehaviour;
+    protected MovementBehaviour mvb;
+    protected float timer;
 
     enum Spawn { A, B }
 
     [Header("Bullet Patterns")]
-    [SerializeField] private Pattern pattern;
-    [SerializeField] private float shootingRate;
-    [SerializeField] private float rotationRate;
-    [SerializeField] private Direction rotationDirection;
+    [SerializeField] protected Pattern pattern;
+    [SerializeField] protected float shootingRate;
+    [SerializeField] protected float rotationRate;
+    [SerializeField] protected Direction rotationDirection;
 
     void Start()
     {
@@ -32,6 +30,11 @@ public class EnemyBehaviour : MonoBehaviour
 
 
     void Update()
+    {
+        EnemyShooting();
+    }
+
+    protected virtual void EnemyShooting()
     {
         if (mvb.GetSpeed() != 0f && !Vector3.Equals(mvb.GetDirection(), Vector3.zero))
         {
@@ -78,7 +81,7 @@ public class EnemyBehaviour : MonoBehaviour
     //    gameController.RemoveEnemy();
     //}
 
-    private void OnBecameInvisible()
+    protected virtual void OnBecameInvisible()
     {
         Destroy(this.gameObject);
     }

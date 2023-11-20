@@ -63,14 +63,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7199610786738190648}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6495217745689974185}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &680041197430647952
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -228,18 +228,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8213570584222754549}
-        m_TargetAssemblyTypeName: EnemyBehaviour, Assembly-CSharp
-        m_MethodName: Remove
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &8213570584222754549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,13 +237,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7199610786738190648}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0205fd76d274e4409004bd900284abb, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a781475607f85542ac43ab5bc7a93d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pattern: 1
-  shootingRate: 0.1
+  shootingRate: 0.3
   rotationRate: 40
-  rotationDirection: 0
+  rotationDirection: 1
 --- !u!114 &7101563014742887873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274c5df1740f3d5419b0521679603219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathAnimation: {fileID: 0}
+  deathAnimation: {fileID: 6762275926937876459, guid: 018d1fa364115df49b7e06637676a89b, type: 3}
   soundOnDestroy: 1
 --- !u!114 &1233917950071723466
 MonoBehaviour:
@@ -296,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f36618e2a6a8ea42a2a0c83d2f23056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPatrol: 1
+  IsPatrol: 1
   nextWaypointDelay: 1
   waypointTag: BossWaypoint
   waypoints: []
