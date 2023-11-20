@@ -134,4 +134,9 @@ public class BossBehaviour : EnemyBehaviour
     {
         base.OnBecameInvisible();
     }
+
+    private void OnDestroy()
+    {
+        GameController.Instance.LevelFinished();
+    }
 }

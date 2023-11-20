@@ -6,7 +6,19 @@ public class GameController : MonoBehaviour
     public UnityEvent OnLevelFinish;
     public UnityEvent OnLevelFail;
 
-    private int enemyCount;
+    private static GameController gameController;
+    public static GameController Instance
+    {
+        get { return gameController; }
+    }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            gameController = this;
+        }
+    }
 
     void Start()
     {
