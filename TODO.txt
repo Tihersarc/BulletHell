@@ -1,5 +1,7 @@
 TO DO:
 
+-Endgame text font
+
 - Check Build
 
 - Add training / hard mode
