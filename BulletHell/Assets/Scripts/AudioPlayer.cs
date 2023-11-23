@@ -29,14 +29,4 @@ public class AudioPlayer : MonoBehaviour
     {
         AudioManager.Stop(s);
     }
-
-    public void OnMusicSliderValueChange(float val)
-    {
-        AudioManager.Instance.OnMusicSliderValueChange(val);
-    }
-
-    public void OnSfxSliderValueChange(float val)
-    {
-        AudioManager.Instance.OnSfxSliderValueChange(val);
-    }
 }

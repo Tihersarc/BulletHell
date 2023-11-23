@@ -8,16 +8,14 @@ public class MenuController : MonoBehaviour
     [SerializeField] private int sceneOnPlay;
 
     [SerializeField] private TMP_Text volumeTextValue;
-    [SerializeField] private Slider volumeSlider;
+    [SerializeField] private Slider musicSlider;
+    [SerializeField] private Slider sfxSlider;
     [SerializeField] private float defaultVolume;
-
-    //[Header("Levels")]
-    //public string _newGameLevel;
-    //private string _levelToLoad;
 
     private void Start()
     {
-        //_volumeSlider.value = _defaultVolume;
+        musicSlider.value = defaultVolume;
+        sfxSlider.value = defaultVolume;
     }
 
     public void LoadScene()
@@ -29,14 +27,22 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
-
     public void Quit()
     {
         Application.Quit();
         Debug.Log("Exit");
     }
 
-    // Set volumetext
+    public void OnMusicSliderValueChange(float val)
+    {
+        AudioManager.Instance.OnMusicSliderValueChange(val);
+    }
+
+    public void OnSfxSliderValueChange(float val)
+    {
+        AudioManager.Instance.OnSfxSliderValueChange(val);
+    }
+
     public void VolumeSetSliderValue(float volume)
     {
         volumeTextValue.text = volume.ToString("0.0");
@@ -44,7 +50,7 @@ public class MenuController : MonoBehaviour
 
     public void VolumeReset()
     {
-        volumeSlider.value = defaultVolume;
-        volumeTextValue.text = defaultVolume.ToString("0.0");
+        musicSlider.value = defaultVolume;
+        sfxSlider.value = defaultVolume;
     }
 }

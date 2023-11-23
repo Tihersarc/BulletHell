@@ -33,29 +33,6 @@ public class BossBehaviour : EnemyBehaviour
         EnemyShooting();
     }
 
-    //protected override void EnemyShooting()
-    //{
-    //    if (mvb.GetSpeed() != 0f && !Vector3.Equals(mvb.GetDirection(), Vector3.zero))
-    //    {
-    //        mvb.MoveTransform();
-    //    }
-
-    //    timer += Time.deltaTime;
-
-    //    if (timer >= shootingRate)
-    //    {
-    //        if (pattern == Pattern.Spin)
-    //        {
-    //            ShootSpin();
-    //        }
-    //        if (pattern == Pattern.Straight)
-    //        {
-    //            ShootHoming();
-    //        }
-    //        timer = 0f;
-    //    }
-    //}
-
     protected override void EnemyShooting()
     {
         timer += Time.deltaTime;

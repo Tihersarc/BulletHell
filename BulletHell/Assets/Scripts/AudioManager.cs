@@ -92,7 +92,6 @@ public class AudioManager : MonoBehaviour
     public static void Stop(string clipname)
     {
         Sound s = soundList.Find(sound => sound.clipName == clipname);
-        //Array.Find(soundList, dummySound => dummySound.clipName == clipname);
 
         if (s == null)
         {
@@ -115,6 +114,22 @@ public class AudioManager : MonoBehaviour
     public void OnSfxSliderValueChange(float value)
     {
         SfxVolume = value;
-        sfxGroup.audioMixer.SetFloat("SfxVolume", Mathf.Log10(value)*20);
+        sfxGroup.audioMixer.SetFloat("SfxVolume", Mathf.Log10(value) * 20);
+    }
+
+    public float GetMusicVolume()
+    {
+        sfxGroup.audioMixer.GetFloat("MusicVolume", out float value);
+        value = Mathf.Pow(10, value / 20);
+
+        return value;
+    }
+
+    public float GetSfxVolume()
+    {
+        sfxGroup.audioMixer.GetFloat("SfxVolume", out float value);
+        value = Mathf.Pow(10, value / 20);
+
+        return value;
     }
 }

@@ -1,10 +1,12 @@
 TO DO:
 
--Endgame text font
+- Shoot sound
 
 - Check Build
 
-- Add training / hard mode
+- Add training / hard mode / godmode
+
+- Resizable window
 
 -------------------------------------------------
 Extra:
@@ -30,18 +32,14 @@ Extra:
 --------------------------------------------------
 BUGS:
 
-- Fix bullet sprite orientation
-
 - Check win music
 
 - Add coroutine to the end of the game
 
-- Fix errors
-
 - Add more patterns
 
-- More SFX(Enemies shooting)
+- More SFX(Enemies and player shooting)
 
-- Disable pause menu or input on win/lose (Disable player controller)
+- Disable pause menu or input on win/lose/Pause (Disable player controller)
 
-- Fix volume/slider initialization
+- Fix volume/slider initialization (Change scripts that used audioPlayer to slidervaluechange in menuController)
