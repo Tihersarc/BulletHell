@@ -76,7 +76,6 @@ public class AudioManager : MonoBehaviour
     public static void Play(string clipname)
     {
         Sound s = soundList.Find(sound => sound.clipName == clipname);
-        //Array.Find(soundList, dummySound => dummySound.clipName == clipname);
 
         if (s == null)
         {

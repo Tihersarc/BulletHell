@@ -18,6 +18,7 @@ public class ShootBehaviour : MonoBehaviour
     {
         GameObject bulletInstance = Instantiate(_bullet, _shootPoint.transform.position, _shootPoint.transform.rotation);
         bulletInstance.GetComponent<MovementBehaviour>().SetDirection(_shootPoint.transform.right);
+        ShootSound();
     }
 
     public void ShootPlayer()
@@ -26,16 +27,19 @@ public class ShootBehaviour : MonoBehaviour
         {
             playerDirection = player.transform.position - _shootPoint.transform.position;
         }
-        
-
 
         GameObject bulletInstance = Instantiate(_bullet, _shootPoint.transform.position, _shootPoint.transform.rotation);
         bulletInstance.GetComponent<MovementBehaviour>().SetDirection(playerDirection);
-
+        ShootSound();
     }
 
     public GameObject GetShootPoint()
     {
         return _shootPoint;
+    }
+
+    public void ShootSound()
+    {
+        AudioManager.Play("Shot");
     }
 }

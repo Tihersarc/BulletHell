@@ -14,8 +14,8 @@ public class MenuController : MonoBehaviour
 
     private void Start()
     {
-        musicSlider.value = defaultVolume;
-        sfxSlider.value = defaultVolume;
+        musicSlider.value = AudioManager.Instance.GetMusicVolume();
+        sfxSlider.value = AudioManager.Instance.GetSfxVolume();
     }
 
     public void LoadScene()

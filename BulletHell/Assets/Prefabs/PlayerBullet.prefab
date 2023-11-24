@@ -126,6 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  isSparks: 1
+  sparks: {fileID: 2120367898987269694, guid: 65e87c4b61b6c2c41857e8c61a85159f, type: 3}
 --- !u!114 &8711444555898452533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,8 +210,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -631993375
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 728b39bd9acdfaa4e8728da8d95769f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

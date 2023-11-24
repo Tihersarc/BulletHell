@@ -2017,6 +2017,13 @@ MonoBehaviour:
     isLoop: 0
     playOnAwake: 0
     volume: 1
+  - audioType: 0
+    source: {fileID: 0}
+    clipName: Shot
+    audioClip: {fileID: 8300000, guid: c02d03b7c93268742ac7a75445b1621c, type: 3}
+    isLoop: 0
+    playOnAwake: 0
+    volume: 0.6
 --- !u!1 &1273339091
 GameObject:
   m_ObjectHideFlags: 0
@@ -2297,12 +2304,12 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.7
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1220491993}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+      - m_Target: {fileID: 1169338895}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: OnSfxSliderValueChange
         m_Mode: 0
         m_Arguments:
@@ -2765,12 +2772,12 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.7
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1220491993}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+      - m_Target: {fileID: 1169338895}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: OnMusicSliderValueChange
         m_Mode: 0
         m_Arguments:

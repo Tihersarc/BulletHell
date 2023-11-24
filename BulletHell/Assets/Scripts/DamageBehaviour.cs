@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class DamageBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private int damage;
+    [SerializeField] private int damage;
+    [SerializeField] private bool isSparks;
+    [SerializeField] private GameObject sparks;
 
     private CinemachineImpulseSource impulseSource;
 
@@ -19,6 +20,11 @@ public class DamageBehaviour : MonoBehaviour
         {
             Debug.Log("hit");
             h.Damage(damage);
+
+            if (isSparks)
+            {
+                Instantiate(sparks, transform.position, Quaternion.identity);
+            }
 
             if (collision.gameObject.TryGetComponent(out PlayerBehaviour p))
             {

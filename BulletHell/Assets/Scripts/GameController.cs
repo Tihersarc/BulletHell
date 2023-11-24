@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -27,12 +28,24 @@ public class GameController : MonoBehaviour
 
     public void LevelFinished()
     {
-        OnLevelFinish.Invoke();
-        Debug.Log("Level Finished");
+        StartCoroutine(WaitLevelFinished());
     }
 
     public void LevelFailed()
     {
+        StartCoroutine(WaitLevelFailed());
+    }
+
+    IEnumerator WaitLevelFinished()
+    {
+        yield return new WaitForSeconds(2f);
+        OnLevelFinish.Invoke();
+        Debug.Log("Level Finished");
+    }
+
+    IEnumerator WaitLevelFailed()
+    {
+        yield return new WaitForSeconds(2f);
         OnLevelFail.Invoke();
         Debug.Log("Level Failed");
     }

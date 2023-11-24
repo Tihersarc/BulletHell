@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PauseController : MonoBehaviour
 {
@@ -31,19 +32,20 @@ public class PauseController : MonoBehaviour
             Time.timeScale = 1.0f;
             isPaused = false;
             pauseMenu.SetActive(false);
+            PlayerController.EnablePlayerInput();
         }
         else
         {
             Time.timeScale = 0f;
             isPaused = true;
             pauseMenu.SetActive(true);
+            PlayerController.DisablePlayerInput();
         }
     }
 
     public static void PauseTime()
     {
         Time.timeScale = 0f;
-
     }
 
     public static void ResumeTime()

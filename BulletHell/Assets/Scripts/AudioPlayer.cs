@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class AudioPlayer : MonoBehaviour
 {
-    [SerializeField] private int deathIndex;
+    [SerializeField] private int deathSoundIndex;
     [SerializeField] private Slider MusicSlider;
     [SerializeField] private Slider SfxSlider;
 
@@ -17,7 +15,7 @@ public class AudioPlayer : MonoBehaviour
 
     public void DeathSound()
     {
-        AudioManager.PlaySound(deathIndex);
+        AudioManager.PlaySound(deathSoundIndex);
     }
 
     public void Play(string s)

@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class BulletBehaviour : MonoBehaviour
 {
-    private MovementBehaviour _movement;
+    private MovementBehaviour movement;
 
     void Start()
     {
-        _movement = GetComponent<MovementBehaviour>();
-        _movement.SetRotationToDirection(90f);
+        movement = GetComponent<MovementBehaviour>();
+        movement.SetRotationToDirection(90f);
     }
 
     void FixedUpdate()
     {
-        _movement.Move();
+        movement.Move();
     }
 
     private void OnBecameInvisible()

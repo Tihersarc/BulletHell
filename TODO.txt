@@ -1,45 +1,31 @@
 TO DO:
 
-- Shoot sound
-
-- Check Build
-
 - Add training / hard mode / godmode
 
-- Resizable window
+- Environment particles (birds or smth)
 
 -------------------------------------------------
 Extra:
 
-- Environment FX
+- In game UI (Score, boosters, etc)   - Zoom out on start + fade or animation
 
-- In game UI (Score, boosters, etc)
+- Menu controlled with controls       - Afterburner particles
 
-- Zoom out on start + fade
+- Retro PostFX                        - Scoreboard
 
-- Menu controlled with controls
+- GameObject pooling                  - Clean code
 
-- Afterburner particles
-
-- Retro PostFX
-
-- Scoreboard
-
-- GameObject pooling
-
-- Clean code
+- Add more patterns
 
 --------------------------------------------------
 BUGS:
 
-- Check win music
+- En el segundo play, error (ShootBehaviour??)
+<-----
 
-- Add coroutine to the end of the game
+(ArgumentNullException: Value cannot be null.
+Parameter name: source
+UnityEngine.AudioSource.Play () (at <0a6fc7bd1e454de69e8cc0d10f3d1c34>:0)
+AudioManager.Play (System.String clipname) (at Assets/Scripts/AudioManager.cs:86))
 
-- Add more patterns
-
-- More SFX(Enemies and player shooting)
-
-- Disable pause menu or input on win/lose/Pause (Disable player controller)
-
-- Fix volume/slider initialization (Change scripts that used audioPlayer to slidervaluechange in menuController)
+----->
