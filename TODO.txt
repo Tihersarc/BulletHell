@@ -2,8 +2,6 @@ TO DO:
 
 - Add training / hard mode / godmode
 
-- Environment particles (birds or smth)
-
 -------------------------------------------------
 Extra:
 
@@ -13,9 +11,7 @@ Extra:
 
 - Retro PostFX                        - Scoreboard
 
-- GameObject pooling                  - Clean code
-
-- Add more patterns
+- Clean code                          - Add more patterns
 
 --------------------------------------------------
 BUGS:

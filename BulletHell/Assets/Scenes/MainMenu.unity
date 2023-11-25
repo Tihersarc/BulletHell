@@ -1988,42 +1988,42 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: ae4c2d9f99f29e744bfb4dcbf70a4e50, type: 3}
     isLoop: 1
     playOnAwake: 0
-    volume: 1
+    volume: 0.4
   - audioType: 0
     source: {fileID: 0}
     clipName: Explosion
     audioClip: {fileID: 8300000, guid: fb7b166a51f2ce646adfc666d43da3b8, type: 3}
     isLoop: 0
     playOnAwake: 0
-    volume: 1
+    volume: 0.5
   - audioType: 1
     source: {fileID: 0}
     clipName: MainMenuSong
     audioClip: {fileID: 8300000, guid: 18a0300d049586d439a397ab7028821f, type: 3}
     isLoop: 1
     playOnAwake: 1
-    volume: 1
+    volume: 0.5
   - audioType: 1
     source: {fileID: 0}
     clipName: FinishMusic
     audioClip: {fileID: 8300000, guid: 265d7c6e5908c5546a2e592bc353f108, type: 3}
     isLoop: 0
     playOnAwake: 0
-    volume: 1
+    volume: 0.5
   - audioType: 1
     source: {fileID: 0}
     clipName: GameOverMusic
     audioClip: {fileID: 8300000, guid: 296a14fd25bf28545b0cd93a5375efe2, type: 3}
     isLoop: 0
     playOnAwake: 0
-    volume: 1
+    volume: 0.5
   - audioType: 0
     source: {fileID: 0}
     clipName: Shot
     audioClip: {fileID: 8300000, guid: c02d03b7c93268742ac7a75445b1621c, type: 3}
     isLoop: 0
     playOnAwake: 0
-    volume: 0.6
+    volume: 0.05
 --- !u!1 &1273339091
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,7 +2304,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.7
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2772,7 +2772,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.7
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
