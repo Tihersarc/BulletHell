@@ -584,7 +584,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1220491993}
+      - m_Target: {fileID: 968598672489570888}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 5
@@ -596,7 +596,7 @@ MonoBehaviour:
           m_StringArgument: MainMusic
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1220491993}
+      - m_Target: {fileID: 968598672489570888}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: Stop
         m_Mode: 5
@@ -605,7 +605,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainMenuSong
+          m_StringArgument: MainMenuMusic
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &141102826
@@ -687,8 +687,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1709487061}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0.49995, y: 0}
+  m_AnchorMax: {x: 0.49995, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -763,7 +763,7 @@ RectTransform:
   m_Father: {fileID: 1422147732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0.49995, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -780,7 +780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.23921569, g: 0.8666667, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -971,7 +971,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1220491993}
+      - m_Target: {fileID: 968598672489570888}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 5
@@ -983,7 +983,7 @@ MonoBehaviour:
           m_StringArgument: MainMusic
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1220491993}
+      - m_Target: {fileID: 968598672489570888}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: Stop
         m_Mode: 5
@@ -992,7 +992,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainMenuSong
+          m_StringArgument: MainMenuMusic
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &488535651
@@ -2061,95 +2061,6 @@ MonoBehaviour:
   musicSlider: {fileID: 1744608627}
   sfxSlider: {fileID: 1356964976}
   defaultVolume: 0.7
---- !u!1 &1220491991
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1220491992}
-  - component: {fileID: 1220491993}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1220491992
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220491991}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1220491993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220491991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 573758da330d3ac459af456f27a3c4b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicGroup: {fileID: 7203933177223420726, guid: 51a26057cf1d5d945befb072ba0a7fa9, type: 2}
-  sfxGroup: {fileID: -6364067531053414442, guid: 51a26057cf1d5d945befb072ba0a7fa9, type: 2}
-  sounds:
-  - audioType: 1
-    source: {fileID: 0}
-    clipName: MainMusic
-    audioClip: {fileID: 8300000, guid: ae4c2d9f99f29e744bfb4dcbf70a4e50, type: 3}
-    isLoop: 1
-    playOnAwake: 0
-    volume: 0.4
-  - audioType: 0
-    source: {fileID: 0}
-    clipName: Explosion
-    audioClip: {fileID: 8300000, guid: fb7b166a51f2ce646adfc666d43da3b8, type: 3}
-    isLoop: 0
-    playOnAwake: 0
-    volume: 0.5
-  - audioType: 1
-    source: {fileID: 0}
-    clipName: MainMenuSong
-    audioClip: {fileID: 8300000, guid: 18a0300d049586d439a397ab7028821f, type: 3}
-    isLoop: 1
-    playOnAwake: 1
-    volume: 0.5
-  - audioType: 1
-    source: {fileID: 0}
-    clipName: FinishMusic
-    audioClip: {fileID: 8300000, guid: 265d7c6e5908c5546a2e592bc353f108, type: 3}
-    isLoop: 0
-    playOnAwake: 0
-    volume: 0.5
-  - audioType: 1
-    source: {fileID: 0}
-    clipName: GameOverMusic
-    audioClip: {fileID: 8300000, guid: 296a14fd25bf28545b0cd93a5375efe2, type: 3}
-    isLoop: 0
-    playOnAwake: 0
-    volume: 0.5
-  - audioType: 0
-    source: {fileID: 0}
-    clipName: Shot
-    audioClip: {fileID: 8300000, guid: c02d03b7c93268742ac7a75445b1621c, type: 3}
-    isLoop: 0
-    playOnAwake: 0
-    volume: 0.05
 --- !u!1 &1273339091
 GameObject:
   m_ObjectHideFlags: 0
@@ -2868,8 +2779,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1530192890}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0.49995, y: 0}
+  m_AnchorMax: {x: 0.49995, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3412,7 +3323,7 @@ RectTransform:
   m_Father: {fileID: 559806482}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0.49995, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3429,7 +3340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2392157, g: 0.86666673, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3454,6 +3365,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084757795}
   m_CullTransparentMesh: 1
+--- !u!114 &968598672489570888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4144685195857539751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573758da330d3ac459af456f27a3c4b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicGroup: {fileID: 7203933177223420726, guid: 51a26057cf1d5d945befb072ba0a7fa9, type: 2}
+  sfxGroup: {fileID: -6364067531053414442, guid: 51a26057cf1d5d945befb072ba0a7fa9, type: 2}
+  sounds:
+  - audioType: 1
+    source: {fileID: 0}
+    clipName: MainMusic
+    audioClip: {fileID: 8300000, guid: ae4c2d9f99f29e744bfb4dcbf70a4e50, type: 3}
+    isLoop: 1
+    isPlayOnAwake: 0
+    volume: 0.4
+  - audioType: 0
+    source: {fileID: 0}
+    clipName: Explosion
+    audioClip: {fileID: 8300000, guid: fb7b166a51f2ce646adfc666d43da3b8, type: 3}
+    isLoop: 0
+    isPlayOnAwake: 0
+    volume: 0.5
+  - audioType: 1
+    source: {fileID: 0}
+    clipName: MainMenuMusic
+    audioClip: {fileID: 8300000, guid: 18a0300d049586d439a397ab7028821f, type: 3}
+    isLoop: 1
+    isPlayOnAwake: 1
+    volume: 0.5
+  - audioType: 1
+    source: {fileID: 0}
+    clipName: FinishMusic
+    audioClip: {fileID: 8300000, guid: 265d7c6e5908c5546a2e592bc353f108, type: 3}
+    isLoop: 0
+    isPlayOnAwake: 0
+    volume: 0.5
+  - audioType: 1
+    source: {fileID: 0}
+    clipName: GameOverMusic
+    audioClip: {fileID: 8300000, guid: 296a14fd25bf28545b0cd93a5375efe2, type: 3}
+    isLoop: 0
+    isPlayOnAwake: 0
+    volume: 0.5
+  - audioType: 0
+    source: {fileID: 0}
+    clipName: Shot
+    audioClip: {fileID: 8300000, guid: c02d03b7c93268742ac7a75445b1621c, type: 3}
+    isLoop: 0
+    isPlayOnAwake: 0
+    volume: 0.05
 --- !u!224 &1631994436652026538
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3500,6 +3468,38 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!1 &4144685195857539751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4838812080417849856}
+  - component: {fileID: 968598672489570888}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4838812080417849856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4144685195857539751}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5419402514550394149
 GameObject:
   m_ObjectHideFlags: 0
@@ -3534,7 +3534,7 @@ SceneRoots:
   - {fileID: 11038061}
   - {fileID: 2077392694}
   - {fileID: 1169338894}
-  - {fileID: 1220491992}
+  - {fileID: 4838812080417849856}
   - {fileID: 1947566155}
   - {fileID: 4622161}
   - {fileID: 1273339094}

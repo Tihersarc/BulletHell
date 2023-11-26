@@ -36,8 +36,7 @@ public class GameController : MonoBehaviour
 
     private void GodMode()
     {
-        //GameObject player = PlayerController.PlayerInputInstance.gameObject;
-        GameObject player = PlayerController.playerTest;
+        GameObject player = PlayerController.PlayerInstance;
 
         player.GetComponent<HealthBehaviour>().enabled = false;
         GameObject shield = player.GetComponent<ShieldBehaviour>().EnableShield();
@@ -56,14 +55,14 @@ public class GameController : MonoBehaviour
 
     IEnumerator WaitLevelFinished()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(.2f);
         OnLevelFinish.Invoke();
         Debug.Log("Level Finished");
     }
 
     IEnumerator WaitLevelFailed()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(.2f);
         OnLevelFail.Invoke();
         Debug.Log("Level Failed");
     }

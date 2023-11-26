@@ -1,7 +1,6 @@
 TO DO:
 
-- Add training / hard mode / godmode
-
+- Clean code
 -------------------------------------------------
 Extra:
 
@@ -11,17 +10,7 @@ Extra:
 
 - Retro PostFX                        - Scoreboard
 
-- Clean code                          - Add more patterns
+- Add more patterns
 
 --------------------------------------------------
 BUGS:
-
-- En el segundo play, error (ShootBehaviour??)
-<-----
-
-(ArgumentNullException: Value cannot be null.
-Parameter name: source
-UnityEngine.AudioSource.Play () (at <0a6fc7bd1e454de69e8cc0d10f3d1c34>:0)
-AudioManager.Play (System.String clipname) (at Assets/Scripts/AudioManager.cs:86))
-
------>

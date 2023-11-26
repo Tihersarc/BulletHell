@@ -18,6 +18,11 @@ public class AudioPlayer : MonoBehaviour
         AudioManager.PlaySound(deathSoundIndex);
     }
 
+    public static void ShootSound()
+    {
+        AudioManager.Play("Shot");
+    }
+
     public void Play(string s)
     {
         AudioManager.Play(s);

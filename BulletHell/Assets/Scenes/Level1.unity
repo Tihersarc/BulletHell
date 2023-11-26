@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 240259440}
   - component: {fileID: 240259438}
   m_Layer: 5
-  m_Name: ContinueButton
+  m_Name: SettingsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1532,7 +1532,7 @@ GameObject:
   - component: {fileID: 882815315}
   - component: {fileID: 882815318}
   m_Layer: 0
-  m_Name: BackgroundTest
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1747,6 +1747,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 38082966}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMusic
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 38082966}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenuMusic
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &990481093
@@ -2238,6 +2262,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 38082966}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMusic
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 38082966}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenuMusic
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 38082966}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GameOverMusic
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1439716627
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2338,6 +2398,42 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 38082966}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMusic
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 38082966}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenuMusic
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 38082966}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FinishMusic
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1473177809
@@ -3449,7 +3545,7 @@ MonoBehaviour:
   volumeTextValue: {fileID: 0}
   musicSlider: {fileID: 8334625703612627286}
   sfxSlider: {fileID: 4641108301494174759}
-  defaultVolume: 0.7
+  defaultVolume: 0.5
 --- !u!4 &2062332624
 Transform:
   m_ObjectHideFlags: 0
@@ -4583,6 +4679,7 @@ GameObject:
   - component: {fileID: 7147917575545866993}
   - component: {fileID: 7753475803422432017}
   - component: {fileID: 1091861974812046801}
+  - component: {fileID: 7753475803422432018}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -4728,7 +4825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.23921569, g: 0.8666667, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5347,7 +5444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.23921569, g: 0.8666667, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5593,33 +5690,9 @@ MonoBehaviour:
   OnDie:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3814939828469064243}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 894803447}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 38082966}
-        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
-        m_MethodName: DeathSound
+      - m_Target: {fileID: 7753475803422432018}
+        m_TargetAssemblyTypeName: DestroyBehaviour, Assembly-CSharp
+        m_MethodName: DisableObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5627,7 +5700,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 38082964}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
@@ -5675,6 +5748,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: 3167745528655570432, guid: b12aacd02ca4fff4ca99498fb692c95a, type: 3}
   _shootPoint: {fileID: 4683098487139350020}
+--- !u!114 &7753475803422432018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3814939828469064243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274c5df1740f3d5419b0521679603219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathAnimation: {fileID: 6762275926937876459, guid: ecd228a3fc692a842ab12afa86f92cda, type: 3}
+  soundOnDestroy: 1
 --- !u!224 &7836183153426566588
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5980,9 +6067,9 @@ SceneRoots:
   - {fileID: 38082963}
   - {fileID: 2093400202}
   - {fileID: 1662495374}
-  - {fileID: 792725915}
   - {fileID: 882815317}
-  - {fileID: 1474377070}
-  - {fileID: 4123763687134230260}
+  - {fileID: 792725915}
   - {fileID: 2359747414415417861}
   - {fileID: 314139213}
+  - {fileID: 1474377070}
+  - {fileID: 4123763687134230260}

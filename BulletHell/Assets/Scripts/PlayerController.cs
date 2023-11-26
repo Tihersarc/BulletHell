@@ -7,18 +7,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private TextMeshProUGUI healthText;
 
-    public static PlayerInput PlayerInputInstance {  get; private set; }
+    public static PlayerInput playerInput;
 
-    public static GameObject playerTest { get; private set; }
+    public static GameObject PlayerInstance { get; private set; }
 
     private void Awake()
     {
-        playerTest = player;
+        PlayerInstance = player;
     }
 
     private void Start()
     {
-        PlayerInputInstance = player.GetComponent<PlayerInput>();
+        playerInput = PlayerInstance.GetComponent<PlayerInput>();
     }
 
     public void UpdateCanvas()
@@ -29,11 +29,11 @@ public class PlayerController : MonoBehaviour
 
     public static void EnablePlayerInput()
     {
-        PlayerInputInstance.enabled = true;
+        playerInput.enabled = true;
     }
 
     public static void DisablePlayerInput()
     {
-        PlayerInputInstance.enabled = false;
+        playerInput.enabled = false;
     }
 }

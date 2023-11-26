@@ -29,19 +29,23 @@ public class AudioManager : MonoBehaviour
 
         if (audioManager != null)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {
             audioManager = this;
         }
         DontDestroyOnLoad(audioManager.gameObject);
+    }
 
+    private void Start()
+    {
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.audioClip;
             s.source.loop = s.isLoop;
+            s.source.playOnAwake = s.isPlayOnAwake;
             s.source.volume = s.volume;
 
             switch (s.audioType)
@@ -55,7 +59,7 @@ public class AudioManager : MonoBehaviour
                     break;
             }
 
-            if (s.playOnAwake)
+            if (s.isPlayOnAwake)
             {
                 s.source.Play();
             }
@@ -77,7 +81,7 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = soundList.Find(sound => sound.clipName == clipname);
 
-        if (s == null)
+        if (s == null || s.source == null)
         {
             Debug.LogError("Sound: " + clipname + " does NOT exist!");
         }
@@ -95,7 +99,6 @@ public class AudioManager : MonoBehaviour
         if (s == null)
         {
             Debug.LogError("Sound: " + clipname + " does NOT exist!");
-            return;
         }
         else
         {
