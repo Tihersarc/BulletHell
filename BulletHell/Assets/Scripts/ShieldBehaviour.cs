@@ -9,13 +9,15 @@ public class ShieldBehaviour : MonoBehaviour
     public GameObject ShieldInstance { get; private set; }
     public bool IsEnabled { get; set; }
 
-    public void EnableShield()
+    public GameObject EnableShield()
     {
         IsEnabled = true;
         if (ShieldInstance == null)
         {
             ShieldInstance = Instantiate(shield, transform.position, Quaternion.identity, transform);
         }
+
+        return ShieldInstance;
     }
 
     public void DisableShield()

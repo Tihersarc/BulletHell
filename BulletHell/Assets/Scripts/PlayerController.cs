@@ -9,6 +9,13 @@ public class PlayerController : MonoBehaviour
 
     public static PlayerInput PlayerInputInstance {  get; private set; }
 
+    public static GameObject playerTest { get; private set; }
+
+    private void Awake()
+    {
+        playerTest = player;
+    }
+
     private void Start()
     {
         PlayerInputInstance = player.GetComponent<PlayerInput>();

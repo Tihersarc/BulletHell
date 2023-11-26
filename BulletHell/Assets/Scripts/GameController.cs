@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,6 +7,8 @@ public class GameController : MonoBehaviour
 {
     public UnityEvent OnLevelFinish;
     public UnityEvent OnLevelFail;
+
+    [SerializeField] private bool isGodMode;
 
     private static GameController gameController;
     public static GameController Instance
@@ -24,6 +27,21 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1.0f;
+
+        if (isGodMode)
+        {
+            GodMode();
+        }
+    }
+
+    private void GodMode()
+    {
+        //GameObject player = PlayerController.PlayerInputInstance.gameObject;
+        GameObject player = PlayerController.playerTest;
+
+        player.GetComponent<HealthBehaviour>().enabled = false;
+        GameObject shield = player.GetComponent<ShieldBehaviour>().EnableShield();
+        shield.GetComponent<SpriteRenderer>().color = Color.red;
     }
 
     public void LevelFinished()

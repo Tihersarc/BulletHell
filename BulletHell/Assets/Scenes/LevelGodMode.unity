@@ -260,7 +260,7 @@ MonoBehaviour:
           m_StringArgument: MainMusic
           m_BoolArgument: 1
         m_CallState: 2
-  isGodMode: 0
+  isGodMode: 1
 --- !u!114 &38082965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2027,7 +2027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1406432634
 RectTransform:
   m_ObjectHideFlags: 0
