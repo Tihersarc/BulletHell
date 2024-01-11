@@ -1,9 +1,5 @@
-MOVE: WASD / Move LS
+Move: WASD / Move Left Stick (Controller)
 
-SHOOT: LeftClick / Spacebar / Right Trigger / A button (XBOX)
+Shoot: LeftClick / Spacebar / Right Trigger (Controller) / A button (Controller)
 
-PAUSE: Escape / Select
-
-GODMODE: G
-
-SPAWNSHIELD CHEAT: H
+Pause: Escape / Select (Controller)
